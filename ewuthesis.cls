@@ -5,6 +5,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ewuthesis}[2016/01/05 Eastern Washington University Thesis]
+\RequirePackage{import}
 \RequirePackage[letterpaper, top=1in, bottom=1in, left=1.5in, right=1in, twoside=false]{geometry}
 
 
