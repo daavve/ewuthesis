@@ -30,6 +30,13 @@ Highlighting=LaTeX
 Indentation Mode=normal
 Mode=LaTeX
 
+[document-settings,item:didnt-pan-out.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
 [document-settings,item:ewuthesis.cls]
 Bookmarks=
 Encoding=UTF-8
@@ -38,6 +45,13 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:ewuthesis.sty]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=normal
+Mode=LaTeX
+
+[document-settings,item:previous-work.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -63,13 +77,23 @@ order=2
 
 [item:abstract.tex]
 archive=true
-column=527
+column=8
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=4
 mode=LaTeX
 open=false
 order=1
+
+[item:didnt-pan-out.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=2
+mode=LaTeX
+open=false
+order=-1
 
 [item:ewuthesis.cls]
 archive=true
@@ -101,9 +125,19 @@ mode=LaTeX
 open=false
 order=-1
 
+[item:previous-work.tex]
+archive=true
+column=40
+encoding=UTF-8
+highlight=LaTeX
+line=2
+mode=LaTeX
+open=true
+order=2
+
 [item:thesis-main.tex]
 archive=true
-column=14
+column=1
 encoding=UTF-8
 highlight=LaTeX
 line=17
@@ -118,10 +152,16 @@ JumpList=
 ViMarks=.,0,134,[,0,117,],0,134
 
 [view-settings,view=0,item:abstract.tex]
-CursorColumn=527
-CursorLine=0
+CursorColumn=8
+CursorLine=4
 JumpList=
-ViMarks=.,0,750,[,0,750,],0,750
+ViMarks=.,2,880,[,2,878,],2,880
+
+[view-settings,view=0,item:didnt-pan-out.tex]
+CursorColumn=0
+CursorLine=2
+JumpList=
+ViMarks=.,2,40,[,2,40,],2,40
 
 [view-settings,view=0,item:ewuthesis.cls]
 CursorColumn=22
@@ -135,8 +175,14 @@ CursorLine=6
 JumpList=
 ViMarks=.,6,15,[,6,9,],6,15
 
+[view-settings,view=0,item:previous-work.tex]
+CursorColumn=40
+CursorLine=2
+JumpList=
+ViMarks=
+
 [view-settings,view=0,item:thesis-main.tex]
-CursorColumn=14
+CursorColumn=1
 CursorLine=17
 JumpList=
-ViMarks=.,0,0,[,0,0,],-1,-1
+ViMarks=.,17,0,[,17,0,],17,0
