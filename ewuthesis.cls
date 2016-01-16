@@ -11,24 +11,20 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 
+\ProcessOptions\relax
+
+\LoadClass[oneside]{book}        % My class is built upon the book class
+                                 % EWU Thesis documents are always one-sided
+
 \newtoks\degreeyear                                         % Fount newtoks:  http://tex.stackexchange.com/questions/239305/latex-variables-varname
 \newtoks\degreeterm
 \newtoks\degree
 \newtoks\department
 
-
-
-\ProcessOptions\relax
-
-\LoadClass[oneside]{book}        % My class is built upon the book class
-                                 % EWU Thesis documents are always one-sided
-                                 
-                                
-
-
-\renewcommand{\maketitle}{      %TODO: Fix formatting, add missing fields and make is fill the page better
+\renewcommand{\maketitle}{      %TODO: Make the formatting better
     \begin{titlepage}
         \begin{center}
+        \vspace*{\fill}         %Puts text in the middle of the page
             \MakeUppercase{\@title}\\
             \rule{\textwidth}{.4pt}
             A Thesis\\
@@ -43,6 +39,7 @@
             by\\
             \@author\\
             \the\degreeterm\ \the\degreeyear
+        \vspace*{\fill}
         \end{center}
     \end{titlepage}
     \newpage
