@@ -1,5 +1,6 @@
 %%      Maintainer:  David McInnis <davidm@eagles.ewu.edu>
 %%      Used clsguide.pdf as reference -> http://mirrors.rit.edu/CTAN/macros/latex/doc/clsguide.pdf
+%%      This class was origionally a fork of jfhbrook/uafthesis, but has since been completely re-written
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -8,14 +9,22 @@
 \RequirePackage{import}
 \RequirePackage[letterpaper, top=1in, bottom=1in, left=1.5in, right=1in, twoside=false]{geometry}
 
-
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
+
+\newtoks\degreeyear                                         % Fount newtoks:  http://tex.stackexchange.com/questions/239305/latex-variables-varname
+\newtoks\degreeterm
+\newtoks\degree
+\newtoks\department
+
+
 
 \ProcessOptions\relax
 
 \LoadClass[oneside]{book}        % My class is built upon the book class
                                  % EWU Thesis documents are always one-sided
+                                 
+                                
+
 
 \renewcommand{\maketitle}{      %TODO: Fix formatting, add missing fields and make is fill the page better
     \begin{titlepage}
@@ -29,10 +38,11 @@
             \rule{\textwidth}{.4pt}
             In Partial Fulfillment of the Requirements\\
             for the Degree\\
-            .....\\
+            \the\degree\ in \the\department\\
             \rule{\textwidth}{1pt}
             by\\
-            \@author
+            \@author\\
+            \the\degreeterm\ \the\degreeyear
         \end{center}
     \end{titlepage}
     \newpage
