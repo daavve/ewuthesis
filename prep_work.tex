@@ -1,0 +1,34 @@
+\chapter{Prep Work}
+
+
+\section{aquiring Character Data}
+
+I eventually discovered a great many characters have already been segmented into bounding-boxes.  The researches at Cadal have also translated individual characters, and annotated Authorship, what what work that character belongs in.
+
+Eventually I discovered that when I sent a particular HTTP request to the web server, I could get a HTML table back of 18 characters,  then is was simply a matter of asking the webserver for the next page and the next page until I received an empty table as a response.  I used a program called wget to retrieve 5,499 html pages, containing a total of 98,970 individual characters.
+
+\section{Transforming data to a usefull format}
+
+Unfortunately, while the HTML tables I received looked good when printed on a web-browser.  The source HTML was formatted in a non-standard way which made the included information difficult to extract automatically..  I built a Python Script using the BeautifulSoup library to extract all relavant information from the HTML table, and save this data in JSON.  Javascript Object Notation.  A widely used data-interchange format.
+
+\subsection{a note about Python classes}
+
+Python 
+
+
+
+\section{Aquiring Character and Page images}
+
+
+\section{Building and Setting up a web-server}
+
+\subsection{Why a webserver?}
+
+I chose the webserver path because the interface itself isn't too elaborate.  Aditionally, my client is not tech-savy.  It is not reasonable to expect art historians to install an operating system or customn software.  Additionall, a web-server provides many advantages over a single-computer install.  Such as many users can access the data on the server.
+
+\section{Building and running al Django app}
+
+Dango provides the web developer with a great deal of flexibility.  The Django app itself is simply a regular Python program connected to a web-server through an interface.  The Python program receives commands from the user, then performs processing and sends the requested feedback, rendered as a web-page.  Importantly, the Django app has accesses to the computational resources of the server to preform significant work.
+
+
+
