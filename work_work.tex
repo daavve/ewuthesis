@@ -1,1 +1,19 @@
-\
+\chapter[work-work]
+
+
+
+\subsubsection{Python and Databases}
+Python classes can be used to hold data inside custom objects.  However, Python's class mechanism is not lightweight enough to use as a data-store of thousands of pieces of data.  Loading all characters into memory consumed over 3.2Gb of memory.  This strategy does not scale well, so I decided to use a more traditional database backed store.  I chose Sqlite because it is comes bundeled with Python and does not require the more complex setup of more heavyweight database engines such as MySQL.
+
+\subsection{Python and JSON}
+JSON(Java Script Object Notation) is a popular data-interchange format used to
+
+
+\section{general issues with Python}
+
+\subsection{Garbage Collection}
+
+Programs such as Python perform something called Garbage collection.  This process is the periodic scrubbing of memory for objects which are no longer used.\\
+I am occustomed to writing in Java.  In Java, the JVM(Java Virtual Machine) Keeps very close track of all objects existing in memory as well as how objects depend on each other.  Whenever lots of memory becomes used the JVM preiodically pauses execution in order to clean unused objects.\\
+I feel that in Python, memory management must work differently.  As Python feels strongly inclined to consume additional memory, and not so strongly inclined to free memory used(at least not automatically).  I also feel that object management must operate differently in Python, because light objects spawned within heavier objects, and then passed out seem to ``inherit'' a good deal of bloat from the object that orchistrated it's creation.
+
