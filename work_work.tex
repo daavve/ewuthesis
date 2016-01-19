@@ -5,9 +5,21 @@
 \subsubsection{Python and Databases}
 Python classes can be used to hold data inside custom objects.  However, Python's class mechanism is not particularly lightweight.  My data-holding object consumes arount 1.5Mb of memory.  This might not seem like much, but consider that each class holds 9 strings.  4 of these strings are guarenteed to be 4 characters or less, the other 5 are 8 characters or less.  I am using the UTF-8 Unicode standard, which means each character uses 8 bits.  So, (4 strings * 4 characters + 5 strings * 8 charactyers) * 8 bits = 288 bits.  Considering That there are 1024 bytes in a Kb and 1024 Kb in a MB, then I paying over a 5 thousand-fold cost in increased memory use for the convience of using Python Objects to hold hold my data.
 
-While, I am tempted to accept such a gross inefficiency.  My conscience will not allow such a poor design decision early in my project.  So I decided to use python-SQLAlchemy and store my data using the integrated Python SQLite datlabase engine.
+I eventually decided to use a CouchDB database, because the entries into a couchDB database are JSON, and I don't have to bother creating a schema or joins or the like....
 
-So I decided to use the Python package SQLAlchemy.  It makes using a database almost as easy(and in some cases moreso) than managing a collection of objects.
+\subsubsection{Python and Django}
+
+But I found out that Django is the widely used and among the most mature Python frameworks.  Django uses something called an Object relational layer to interface with Databases.  Unfortunately, Django pretty much expects to connect to a SQL-Like database, and therefore no-SQL databases like couchDB can work, but only with hacky work-arounds.  Something I am not willing to pursue here.   So, I ended up doing what I figured I probably should do in the beginning, make a schema with tables and the like.
+
+
+\subsection{SQL Schema}
+
+
+
+\subsection{Python and Classes}
+
+python classes can be extended using the following syntax:
+    class Extendedclass(Classtobeextended):
 
 \subsection{Python and JSON}
 JSON(Java Script Object Notation) is a popular data-interchange format used to

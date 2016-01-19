@@ -18,8 +18,7 @@ Python also works very well as a glue language to interface between different pr
 Many variants of Python exist such as IronPython, RubyPython, JPython, Pypi and so on. I chose CPython, because CPython is the reference implementation of the Python language.  This means the CPython is considered the ``Official Language'' and most faithfully implements the Python Standard compared against other variants.
 \subsubsection{Python2 or Python3}
 I chose Python3 because it is the most up-to-date version of Python, and the one Python's designers want new software to be written in.
-\subsubsection{Python and Sqlite}
-Python classes can be used to hold data inside custom objects.  However, Python's class mechanism is not lightweight enough to use as a data-store of thousands of pieces of data.  Loading all characters into memory consumed over 3.2Gb of memory.  This strategy does not scale well, so I decided to use a more traditional database backed store.  I chose Sqlite because it is comes bundeled with Python and does not require the more complex setup of more heavyweight database engines such as MySQL.
+
 
 \subsubsection{scipy and scipy-image}
 I used the Scientific Python package for much of my work. SKimage of image analysis libraries out-of-the-box.  Python image and table data structures are written in C, with clear concise interfaces which permit direct editing by of in-memory data written in a variety of languages.
