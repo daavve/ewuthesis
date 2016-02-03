@@ -1,0 +1,11 @@
+crop    Crop an image to a width and height.    height, width, align, valign
+scale   Scale an image to a width and height (deforming it).    height, width
+fit     Scale an image to a width and height and crop the overflow.     height, width, align, valign
+watermark       Paste a watermark on a image.   watermark_image, opacity
+grayscale       Convert the image to grayscale.  
+flip    Flip the image vertically.       
+mirror  Flip the image horizontally.     
+equalize        Equalize the image histogram.    
+autocontrast    Maximize (normalize) image contrast.    cutoff
+invert  Invert the image colors.         
+convert Convert image mode (L, RGB or CYMK).    mode

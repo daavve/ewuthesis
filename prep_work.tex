@@ -7,9 +7,22 @@ I eventually discovered a great many characters have already been segmented into
 
 Eventually I discovered that when I sent a particular HTTP request to the web server, I could get a HTML table back of 18 characters,  then is was simply a matter of asking the webserver for the next page and the next page until I received an empty table as a response.  I used a program called wget to retrieve 5,499 html pages, containing a total of 98,970 individual characters.
 
+When I bulk-downloaded the images from the website I received 110,437 .jpg images, meaning we have 11,467 images that have no corresponding data.  I think.....
+
+\section{Downloading the source images}
+
+\subsection{Individual Character Jpegs}
+The jpegs holding the individual character data all existed in a seriese of easily accessible folders,  I got the bunch using a wget command.
+
+\subsection{Individual Page Images}
+The page images initially seemed to come down with a single wget command.  However, when I started building the individual character objects from downloaded data, I notices that seemingly \textit{random} page images were plain missing.  Through mmmuch trial and error I discovered that the individual pages only appear in the exposed(exposed to the web).  Part of the webserver after I manually clicked the ``show where'' icon next to the character in the table.
+
+The act of manually clicking this button the launched an Adobe Flash application which qweried the server for the page image file.  Then downloaded and rendered this file, then drew an overlay of the bounding box around the character.  Thereafter, I could download the requested page from the webserver, but to the best of my knowledge no pages of calligraphy are exposed to the internet untill after first querying them from the webserver with this script.
+
+
 \section{Transforming data to a usefull format}
 
-Unfortunately, while the HTML tables I received looked good when printed on a web-browser.  The source HTML was formatted in a non-standard way which made the included information difficult to extract automatically..  I built a Python Script using the BeautifulSoup library to extract all relavant information from the HTML table, and save this data in JSON.  Javascript Object Notation.  A widely used data-interchange format.
+Unfortunately, while the HTML tables I received looked good when printed on a web-browser.  The source HTML was formatted in a non-standard way which made the included information difficult to extract automatically..  I built a Python Script using the BeautifulSoup library to extract all relavant information from the HTML table, and save this data in JSON.  Javascript Object Notation.  A widely used data-interchange format.  I chose JSON because it is becoming the de-facto standard for data sharing on the web.  And I want to make my work as accessable as possible to fellow researchers.
 
 \subsection{a note about Python classes}
 

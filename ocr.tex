@@ -1,0 +1,25 @@
+\chapter{OCR}
+
+
+Our calligrapher:  王羲之
+
+
+tesseract,  need to install tesseract, tesseract-data-en + tesseract-data-chi_tra + tesseract-data-ch_sim + tesseract-data-jpn
+
+
+Exanmple of running tesseract against an image:
+
+tesseract 5t_1.png stdout -l chi_tra
+力而無下。大之則彌於宇 無生o歷 千劫而 不古。若隱
+宙。細之則攝於豪釐o無滅 若顯o連百幅而長今o妙道
+
+[dave@bigArch newscan]$ 
+
+
+\section{format}
+
+Note about .jp2:  Jpeg2000 format has superior compression.  However, many of the applications I am using do not support it.  So I am using .png
+
+jpeg2000: 2.1Gb,
+png:    4.4 Gb:  Even with maximum compression
+
