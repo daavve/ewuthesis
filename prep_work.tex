@@ -1,13 +1,14 @@
 \chapter{Prep Work}
 
-
 \section{aquiring Character Data}
+
+The CADAL Server in china delivers images at wildly inconsistant speeds.  Sometimes at slow at 20KB/s sometimes as fast at 2.5MB/s.  But usally above 50KB/s and below 500KB/s 
 
 I eventually discovered a great many characters have already been segmented into bounding-boxes.  The researches at Cadal have also translated individual characters, and annotated Authorship, what what work that character belongs in.
 
 Eventually I discovered that when I sent a particular HTTP request to the web server, I could get a HTML table back of 18 characters,  then is was simply a matter of asking the webserver for the next page and the next page until I received an empty table as a response.  I used a program called wget to retrieve 5,499 html pages, containing a total of 98,970 individual characters.
 
-When I bulk-downloaded the images from the website I received 110,437 .jpg images, meaning we have 11,467 images that have no corresponding data.  I think.....
+
 
 \section{Downloading the source images}
 
@@ -26,7 +27,7 @@ Unfortunately, while the HTML tables I received looked good when printed on a we
 
 \subsection{a note about Python classes}
 
-Python 
+The Python garbage collector seems much less effective than the Java garbage collector at removing classes that no longer are in use.  When python classes become instantiated and interact with each other.  Such as when a p
 
 
 
@@ -43,5 +44,36 @@ I chose the webserver path because the interface itself isn't too elaborate.  Ad
 
 Dango provides the web developer with a great deal of flexibility.  The Django app itself is simply a regular Python program connected to a web-server through an interface.  The Python program receives commands from the user, then performs processing and sends the requested feedback, rendered as a web-page.  Importantly, the Django app has accesses to the computational resources of the server to preform significant work.
 
+\section{sending stuff to the virtual server}
 
+
+rsync -avr --progress newscan admin@167.114.93.26:~/
+
+
+
+\section{compressing images on server}
+
+[dave@bigArch otiff]\$ convert -verbose 00000001.tif -type Bilevel -quality 9 -compress lzw 00000001-1.tif 
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+^C[dave@bigArch otiff]\$ convert -verbose 00000001.tif -quality 9 -compress lzw 00000001-1.tif              
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+00000001.tif=>00000001-1.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 55.43MB 0.000u 0:00.000
+[dave@bigArch otiff]\$ convert -verbose 00000001.tif -quality 9 00000001-1.png
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+00000001.tif=>00000001-1.png TIFF 4897x6736 4897x6736+0+0 8-bit sRGB 42.9MB 0.001u 0:00.000
+[dave@bigArch otiff]\$ convert -verbose 00000001.tif -type loslessjpeg 00000001.jp2
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+convert: unrecognized image type `loslessjpeg' @ error/convert.c/ConvertImageCommand/3077.
+[dave@bigArch otiff]\$ convert -verbose 00000001.tif -type losslessJPEG 00000001.jp2
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+convert: unrecognized image type `losslessJPEG' @ error/convert.c/ConvertImageCommand/3077.
+[dave@bigArch otiff]\$ convert -verbose 00000001.tif -compress losslessJPEG 00000001.jp2
+00000001.tif TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 69.2MB 0.000u 0:00.000
+00000001.tif=>00000001.jp2 TIFF 4897x6736 4897x6736+0+0 8-bit TrueColor sRGB 41.67MB 0.003u 0:00.002
+
+jid=\$(identify \$j | grep '8-bit') # Binary images get bigger when we compress them?
+
+
+Disk Usage      59%
+47.17 GB of 80 GB Used / 32.83 GB Free : Before Compression
 
