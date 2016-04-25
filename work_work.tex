@@ -7,9 +7,24 @@ Python classes can be used to hold data inside custom objects.  However, Python'
 
 I eventually decided to use a CouchDB database, because the entries into a couchDB database are JSON, and I don't have to bother creating a schema or joins or the like....
 
+
+\subsubsection{Why use a database at all}
+
+Django expects a database to hold relevant.
+
+\subsubsection{Database Choice}
+
+I initially chose CouchDB because the underlying entries into the couchDB database are JSON, and since I already had JSON data for my characters.
+
+Unfortunately, I found CouchDB not a good choice, because Django expects to connect to a SQL-like database, and CouchDB is more of a Key-Value store.  I did get Django to successfully interface with CouchDB, but the resulting construct was extremely slow.
+
+
+
 \subsubsection{Python and Django}
 
-But I found out that Django is the widely used and among the most mature Python frameworks.  Django uses something called an Object relational layer to interface with Databases.  Unfortunately, Django pretty much expects to connect to a SQL-Like database, and therefore no-SQL databases like couchDB can work, but only with hacky work-arounds.  Something I am not willing to pursue here.   So, I ended up doing what I figured I probably should do in the beginning, make a schema with tables and the like.
+But I found out that Django is the widely used and among the most mature Python frameworks.  Django uses something called an Object relational layer to interface with Databases.  Unfortunately, Django pretty much expects to connect to a SQL-Like database.  It is possible to connect 
+
+I did get Django to work with CouchDB
 
 
 \subsection{SQL Schema}
@@ -66,12 +81,11 @@ Hypertext markup Language, or HTML is the basic building block of a website.  Th
 
 \chapter{css}
 
-Cascading Style Sheets describe to the browser how the images and text of a website should look.  
+Cascading Style Sheets describe to the browser how the images and text of a website should be organized.  
 
 \chapter{javascript}
 
-Javascript is a programming language which most web-browsers are capable of running.  From the context of our project, it 
-
+Javascript is a programming language which most web-browsers are capable of running.  From the context of our project.  Javascript provides the interactivity of the website.  It is especially usefull because thee scripts respond programmatically to user inputs such as selecting, and dragging and dropping.  
 
 
 
@@ -80,7 +94,7 @@ Javascript is a programming language which most web-browsers are capable of runn
 
 \subsubsection{static content}
 
-static content consists of documents necessary for the generation of a website that do not change fequently or at all.
+static content consists of documents necessary for the generation of a website that do not change fequently or at all.  The calligraphy documents we 
 
 \paragraph{images}
 
@@ -88,7 +102,7 @@ Images are prehaps the most well-known form of static content.  They consists
 
 \paragraph{javascript libraries}
 
-Javascript libraries 
+Javascript libraries exist to simplify and steamline the process of writing Javascript for a website.  The javascript is 
 
 \subsubsection{dynamic content}
 
