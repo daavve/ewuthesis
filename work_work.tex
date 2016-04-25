@@ -1,52 +1,49 @@
 \chapter{work-work}
 
 
-
-\subsubsection{Python and Databases}
-Python classes can be used to hold data inside custom objects.  However, Python's class mechanism is not particularly lightweight.  My data-holding object consumes arount 1.5Mb of memory.  This might not seem like much, but consider that each class holds 9 strings.  4 of these strings are guarenteed to be 4 characters or less, the other 5 are 8 characters or less.  I am using the UTF-8 Unicode standard, which means each character uses 8 bits.  So, (4 strings * 4 characters + 5 strings * 8 charactyers) * 8 bits = 288 bits.  Considering That there are 1024 bytes in a Kb and 1024 Kb in a MB, then I paying over a 5 thousand-fold cost in increased memory use for the convience of using Python Objects to hold hold my data.
-
-I eventually decided to use a CouchDB database, because the entries into a couchDB database are JSON, and I don't have to bother creating a schema or joins or the like....
-
-
-\subsubsection{Why use a database at all}
-
-Django expects a database to hold relevant.
-
-\subsubsection{Database Choice}
-
-I initially chose CouchDB because the underlying entries into the couchDB database are JSON, and since I already had JSON data for my characters.
-
-Unfortunately, I found CouchDB not a good choice, because Django expects to connect to a SQL-like database, and CouchDB is more of a Key-Value store.  I did get Django to successfully interface with CouchDB, but the resulting construct was extremely slow.
-
-
-
 \subsubsection{Python and Django}
 
 But I found out that Django is the widely used and among the most mature Python frameworks.  Django uses something called an Object relational layer to interface with Databases.  Unfortunately, Django pretty much expects to connect to a SQL-Like database.  It is possible to connect 
 
 I did get Django to work with CouchDB
 
+\subsubsection{Why use a database at all}
+
+Django expects a database to hold the majority of the underlying content that drives a web-server.  When running a web-server a database is a natural fit because of the following:
+
+A webserver must support multiple users accessing a commmon dataset simultaniously.
+If the server supports any changes on that common set then conflicts between different different users must be handled cleanly and efficiently.
+
+Any software that supports the above is a de-facto database.  But databases are difficult and time-consuming to get right.  So it's better to use a well tested solution.
+
+\subsubsection{Database Choice}
+
+Django's default database is SQlite.  The Django documentation stresses that while SQlite is a good choice for small  projects, that large projects really should use a more heavyweight solution like MySQL.  This is because SQlite does not scale well when working with large datasets or handling large numbers of requests.
+
+I initially chose CouchDB because the underlying entries into the couchDB database are JSON, and since I already had JSON data for my characters it seemed like a natural choice to use CouchDB
+
+Unfortunately, I found CouchDB not a good choice, Django expects to connect to a SQL-like database, and CouchDB is more of a Key-Value store.  It is possible to get CouchDB to behave like a SQL database using an elaborate adaption layer.  I did eventually get Django to interface with CouchDB, but the result was extremely slow and inefficient.
+
+I then abandoned CouchDB and decided to use a more mainstream soltion.  I settled on PostGresQL because Django seems to have very good support of PostGres, and the PostGres database itself seemed easier to set up and use than MySQL.  PostGres has the advantage over SQlite that it is more preformant with larger datasets or large ammounts of request.  It's disadvantage is that PostGres is somewhat more heavyweight(consumes more system resources by default) and requires a more elaborate setup.
+
+PostGres did indeed end up being a good choice.  It works very well for my purposes.
+
+
+\subsection{What is an SQL database}
+
+A SQL database is a data store which behaves in a more-or-less consistant way between vendors.  SQL stands for Something Query Language?  SQL represents a common computing language used to interact with SQL-compliant databases.  The SQL standard does not dictate the method of implementation so different SQL databases can have completely different performance characteristics.
 
 \subsection{SQL Schema}
 
+Before an SQL database can be populated with data it must be assigned to a shema
 
 
-\subsection{Python and Classes}
-
-python classes can be extended using the following syntax:
-    class Extendedclass(Classtobeextended):
 
 \subsection{Python and JSON}
 JSON(Java Script Object Notation) is a popular data-interchange format used to
 
 
-\section{general issues with Python}
 
-\subsection{Garbage Collection}
-
-Programs such as Python perform something called Garbage collection.  This process is the periodic scrubbing of memory for objects which are no longer used.\\
-I am occustomed to writing in Java.  In Java, the JVM(Java Virtual Machine) Keeps very close track of all objects existing in memory as well as how objects depend on each other.  Whenever lots of memory becomes used the JVM preiodically pauses execution in order to clean unused objects.\\
-I feel that in Python, memory management must work differently.  As Python feels strongly inclined to consume additional memory, and not so strongly inclined to free memory used(at least not automatically).  I also feel that object management must operate differently in Python, because light objects spawned within heavier objects, and then passed out seem to ``inherit'' a good deal of bloat from the object that orchistrated it's creation.
 
 
 \section{webserver}
@@ -97,13 +94,84 @@ static content consists of documents necessary for the generation of a website t
 
 \paragraph{images}
 
-Images are prehaps the most well-known form of static content.  They consists
+Images are prehaps the most well-known form of static content.  The server does not discriminate between images and other static objects when serving them.
 
 \paragraph{javascript libraries}
 
 Javascript libraries exist to simplify and steamline the process of writing Javascript for a website.  The javascript is 
 
-\subsubsection{dynamic content}
+
+\subsection{Options for running a server}
+
+\subsubsection{running a server from school}
+
+Eastern Washington University does provide a limited website solution for students.  Unfortunately the websites produced by the EWU system are highly standardized in the front end, and static in nature.  The EWU website is inherintly inflexible and is therefore unsuitable for this project.
+
+\subsubsection{running a srever from the computer science building}
+
+While this is possible, it is not realistic.  The network administrator for the building could set me up with a website hosted in the computer science building, and I have asked him.  Unfortunately however, the nature of the position means the demands for his time are essentially infinant.  Our network admin has work requirements from the administration, as well as the faculty and other students.  Additionally there are a myramid of regulations that restrict what he can and cannot do.  My thesis is not a high enough priority in the department to demand the (considerable effort) such a task would take.
+
+Fortunately, there are other options that do not tax me or the administration as heavily as running a server from the university.
+
+
+\subsubsection{running a server from home}
+
+It is possible for any computer connected to the internet to function as a webserver.  While hosting a webserver from home has some advantages, it also has several very significant disadvantages:
+
+\begin{itemize}
+    \item Advantages
+    \begin{itemize}
+        \item Does not cost additional money
+        \item Is comparitively easy to set up because I have direct access to the hardware.
+    \end{itemize}
+    \item Disadvantages
+    \begin{itemize}
+        \item Is cripplingly slow for anyone outside house
+        \item Violates contract I signed with my ISP.
+    \end{itemize}
+
+    I am running something called a debug server in my house.  The debug server provided by Django is slow, inefficient, and insecure.  But it is the easiest server to set up, so it is the one I am using for development
+
+\end{itemize}
+
+\subsection{Renting space in a datacenter}
+
+The most cost-effective way to run a server is to rent computing resources from a datacenter.  The price varies considerably based on the resources required.  Below are some examples:
+
+\begin{itemize}
+    \item Rent a physical computer
+    \begin{itemize}
+        \item Also called Dedicated Hosting
+        \item Price starts at \$50 / mo
+        \item You get complete controll of a dedicated computer at the Datacenter
+        \item You get a lot of hard drive space and RAM for the price: https://www.servermania.com/baremetal-dedicated-servers.htm
+        \item The computer you do get is slower than VPS for the price paid
+    \end{itemize}
+
+    \item Rent a virtual computer
+    \begin{itemize}
+        \item Also called a VPS(Virtual Private Server)
+        \item Gives you full root access to the macine
+        \item You can install anything you want and configure it any way you want
+        \item Reasonable cost:  \$5 - \$40 or so a month
+        \item Very good performance for price since computing resources are shared between VM's
+    \end{itemize}
+
+    \item Rent space on a virtual computer
+    \begin{itemize}
+        \item Also called a web hosting plan
+        \item Cheapest:  Free - \$5 or so a month
+        \item Most cost effective if performance and customization aren't critical
+        \item Easiest if you want a boilerplate site
+        
+    \end{itemize}
+
+    I chose to rent a VPS from Kloud51 for \$40 a month.  This was the cheapest option which still gave me the configurability and space (for all the images) that I needed.
+    
+    Note: Technology is swiftly evolving and competition is currently intense. The above is likely to change quickly.
+    
+\end{itemize}
+
 
 
 \subsection{Django}
@@ -125,7 +193,7 @@ Python documentation recommended I use this simple server such as gunicorn, or u
 
 Is a jquery package made by the jquery foundation.  It is used to provide users with 
 
-\paragrarph{jrac}
+\paragraph{jrac}
 
 JRAC(Jquery Resize and Crop) is a a jquery package that uses jquery-ui to provide the user an interactive window 
 
