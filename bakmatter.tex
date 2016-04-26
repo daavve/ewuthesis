@@ -1,0 +1,77 @@
+
+/etc/systemd/system/gunicorn.service
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+PIDFile=/run/gunicorn/pid
+User=django
+Group=django
+WorkingDirectory=/home/django/ewucal
+ExecStart=/usr/bin/gunicorn --pid /run/gunicorn/pid --bind unix:/run/gunicorn/socket ewucal.wsgi
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+[root@calligraphy system]# cat gunicorn.socket 
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn/socket
+
+[Install]
+WantedBy=sockets.target
+
+
+
+
+/etc/nginx/nginx.conf
+
+user http;
+worker_processes auto;
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server { 
+        listen       80;
+        server_name davehub.net;
+
+        location /media/ {
+            root /media;
+        }
+
+        location /static/ {
+            root /static;
+        }
+
+
+        location / {
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme; 
+            proxy_pass http://unix:/run/gunicorn/socket;
+        }
+    }
+    
+    
+    
