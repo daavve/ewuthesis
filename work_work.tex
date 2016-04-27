@@ -58,7 +58,32 @@ I initially tried to store my data in something called a Pickle.  A pickle is a 
 
 I used this to store the the scrapped data in a few files.  It included all the prudent data I collected from the thousands of files I scrapped from the CADAL server.
 
+I used python's JSON formatter in order write my files in a format that is easily understandable and readable by other researchers.
 
+\subsection{JSON}
+
+JavaScript Object Notation, or JSON for short is an intermediate file format which is especially well suited for data interchange for the following reasons
+
+The data formatted in plain text, so it is easily read by either machines or humans.
+
+JSON data is formatted in a simple consistant and flexible way.  Here is an example of a single character formatted in JSON:
+
+[
+{
+  "chi_author": "王羲之",
+  "chi_mark": "又",
+  "chi_work": "兰亭序",
+  "page_id": "00000053",
+  "work_id": "06100007",
+  "xy_coordinates": [
+  "102",
+  "613",
+  "164",
+  "662"
+  ]
+},
+
+You will notice that JSON is very verbose.  Every value stored inside a JSON document is paired with a description of that variable.  This feature makes JSON easily readable and understandable.
 
 
 
@@ -288,6 +313,18 @@ But the application did have some components I needed.  Mainly the ability to zo
 \paragraph{my interface inspired by jrac}
 
 I basically re-wrote the jrac code so that the window painted character data from 
+
+\subsection{sending data back to the webserver}
+
+As mentioned previously. Django responds to browser requests by processing the URL string sent to the server, and generating a HTML page based on that URL.  The generated page is then sent back to the browser over the internet.
+
+The browser then interprets and displays the HTML page.  If the page contains JavaScript that JavaScript is executed.  This results in interactive application which is mostly client-facing.  This means that communication between the browser and server is asynchronous.
+
+The browser is capable of sending arbitrary data to a webserver bundled inside something called an HTTP request.
+
+\section{Domain Name Server}
+
+Domain Name Servers (DNS's), also called Domain Name resolvers exist to make navigating the internet more user friendly.  The server that you rent in a datacenter gets its own IP address usually as part of the service provided.  An IP address is a unique 12, or 
 
 \subsection{if you want to enable image uploading by users}
 
