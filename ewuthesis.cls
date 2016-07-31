@@ -5,18 +5,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ewuthesis}[2016/01/05 Eastern Washington University Thesis]
+\ProvidesClass{ewuthesis}[2016/04/28 Eastern Washington University Thesis]
+
+\LoadClass[letterpaper, oneside, 12pt]{book}        % My class is built upon the book class
+                                                    % EWU Thesis documents are always one-sided
+                                                    
+                                                    
 \RequirePackage{import}
-\RequirePackage[letterpaper, top=1in, bottom=1in, left=1.5in, right=1in, twoside=false]{geometry}
-
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
-
-\ProcessOptions\relax
-
-\LoadClass[oneside]{book}        % My class is built upon the book class
-                                 % EWU Thesis documents are always one-sided
-
-\newtoks\degreeyear                                         % Fount newtoks:  http://tex.stackexchange.com/questions/239305/latex-variables-varname
+\normalsfcodes
+                                 
+\newtoks\degreeyear 
 \newtoks\degreeterm
 \newtoks\degree
 \newtoks\department
