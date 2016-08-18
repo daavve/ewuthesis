@@ -1,0 +1,24 @@
+\chapter{backmatter}
+
+This is where all the stuff I found out that might not be directly related to my thesis goes for now.
+
+\section{general issues with Python}
+
+\subsection{Garbage Collection}
+
+Programs such as Python perform something called Garbage collection.  This process is the periodic scrubbing of memory for objects which are no longer used.\\
+I am occustomed to writing in Java.  In Java, the JVM(Java Virtual Machine) Keeps very close track of all objects existing in memory as well as how objects depend on each other.  Whenever lots of memory becomes used the JVM preiodically pauses execution in order to clean unused objects.\\
+I feel that in Python, memory management must work differently.  As Python feels strongly inclined to consume additional memory, and not so strongly inclined to free memory used(at least not automatically).  I also feel that object management must operate differently in Python, because light objects spawned within heavier objects, and then passed out seem to ``inherit'' a good deal of bloat from the object that orchistrated it's creation.
+
+\subsubsection{Python and classes}
+
+\subsection{Python and Classes}
+
+python classes can be extended using the following syntax:
+    class Extendedclass(Classtobeextended):
+
+Python classes can be used to hold data inside custom objects.  However, Python's class mechanism is not particularly lightweight.  Every data-holding object consumes arount 1.5Mb of memory.  This might not seem like much, but consider that each class holds 9 strings.  4 of these strings are guarenteed to be 4 characters or less, the other 5 are 8 characters or less.  I am using the UTF-8 Unicode standard, which means each character uses 8 bits.  So, (4 strings * 4 characters + 5 strings * 8 charactyers) * 8 bits = 288 bits.  Considering That there are 1024 bytes in a Kb and 1024 Kb in  1MB, then I paying over a 5 thousand-fold cost in increased memory use for the convience of using Python Objects to hold hold my data.
+
+Also, since I have nearly 100,000 characters, and each character object consumes 1.5MB, I need over 100GB of memory to hold all characters in python objects
+
+Conclusion:  Bulk holding of data inside many python classes is wastefull of resources and can quickly exhaust the resources of the host computer.
