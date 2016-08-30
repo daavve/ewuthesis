@@ -1,44 +1,58 @@
-Fundamental problems I am pursuing & overall progress of problems pursued.
-
-
-
 3)  Character comparison (Kosuke's Task):
     Question:   Given a Calligraphic work <Kosuke's book> featuring a collection of characters hand-copied from a variety of parent works.
                 Given that none of the origionals exist, and that both Kosuke's book as well as the parent works we have available are hand copied one or more times from the origionals.
-                For any given Character in Kosuke's book, can we determine the source character from which it was copied from?
+                For any given Character in Kosuke's book, can we determine source document and specific character it was coppied from?
                 
-
-
-
-
-
-
 Why people might find this important:
     *  The character's in Kosuke's are considered the "best" examples of calligraphy by Wang-Xu.
     *  Understanding which source documents contributed to this book would yeild a deeper understanding of which scripts contributed most strongly to this collection of exemplar characters.
+    *  A strong market exists for calligraphic works.  Works certified as authentic(nearly origional) can command high prices, which creates an incentive for forgeries.  A lack of good records, loss of origional artifacts, and the inconsistencies in duplication and distribution make the certification challange extremely difficult.
     
-Chalanges:
-    *  Our samples are incomplete.
-        + We may not have copies of all source works
-        + Of the source works we do have, not all characters are currently in a format giving us easy comparison.
-
+Previous Work:
+    1) Digital Libraries.  Online repositories of information provided over the internet.
+        *World digital library
+        *China Million Book Project
+            *CADAL:
+                -CADAL Calligraphic database
+    2) ACADEMIC work:
+        *Handwriting analysis
+            +signature verification
+            
 
 Process:  What I had to do:
     1)  Get together a colletion of characters origionally written by 王羲之.
     2)  Scan Kosuke's book
-    3)  Find what characters are in Kosuke's book, as well as find the bounding box of each character.
+    3)  Organize the characters in Kosuke's book as well as characters found by other means in a consistant format 
     
 What I found:
     1)  There exist two databases which have segmented characters written by 王羲之.
     2)  CADAL, and Other guys < never was able to get in touch with other guys >
-    3)  Searching CADAL did not give me good enough results.
-    3.5)  One of the CADAL researcher got back to me, but I wasn't able to get the info I needed from him / her.
+        *CADAL calligraphy page contains thousands of pages of scanned text, as well as over 100K chinese characters as well as associated metadata.
+    Unexpected problems that violated my initial assumptions:
+        * not all calligraphic works have a text script accompanying them
+        * not all calligraphic works with text have individual characters mapped
+        * of those calligraphic works with characters mapped
+            -pages only have a portion of characters maped.
+            -Quality of mapped characters is inconsistant
+                * many characters have different boarders in image than attached coordinates
+                * Bounding boxes frequently overlap, and sometimes cut off important parts of a character.
 
-
-1)  Peer-Review:
-    Question:  Confirm work presented in CADAL website accurately matches CADAL paper.
-    Motivation:  Incidental to work on character similarity work, and character segmentation work.
-
+What I was able to do:
+    Build a tool which allows the user to view individual calligraphic pages extracted from the CADAL database.
+    My findings:
+        * There exists enough work to compare many dozen of the same characters, but from different works by the same author, on a character by character basis. <This is already known>
+        *  Of the characters encoded in CADAL Calligraphy many characters are single specimines and therefore defy individual comparisons.  <also already known>
+    
+    My results:
+        *  I have failed in my attempt to reliably identify any of the source characters in Kosuke's book.
+        
+        *  I have gained usefull insight into the problem though.
+            +I transformed data from CADAL into a format which serves my purpose.
+            +I transformed the CADAL data in JSON, a general-purpose format that other users can use for analysis.
+            
+    My future work:
+        *  Make more progress in my calligraphy website.
+        *  Enable croud-sourcing of segmentation and attribution data, as well as validation of said data
 
 
 2)  Character segmentation:
@@ -51,15 +65,3 @@ Why the website?
         +Why we need croud-sourcing? <number of unsegmented results, humans still better at this visual task>
 
 
-
-
-what we have:
-    Problem:
-    
-    Data aquisition
-    
-    Data Synthesis
-    
-    Data Analysis
-    
-    Data evaluation
