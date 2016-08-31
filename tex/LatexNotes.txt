@@ -1,4 +1,9 @@
-\part{''part''}
+Removing multiple files from a Git repo...
+
+git ls-files --deleted -z | xargs -0 git rm 
+
+
+part{''part''}
 \chapter{''chapter''}
 \section{''section''}
 \subsection{''subsection''}
