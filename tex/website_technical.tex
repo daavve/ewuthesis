@@ -1,0 +1,341 @@
+\chapter{website-technical}
+
+\subsection{Java to Python}
+
+Earlier I mentioned that I made the transition from programing the project primarily in Java, to using Python.  I made the switch because Python provides a more comprehensive set of freely available tools for manipulating and performing data science against images.  Also, because Python is better at interacting with foreign languages than Java, and that developing software is (in my opinion) faster and easier in Python.
+
+\subsection{Python to the Web}
+
+As with programming languages, there are a vast number of Python Web frameworks to choose from.  Among the most populare are Django, Pylons, Tornado, and Flask.
+
+I chose Django, because the website said it was for ``developers with deadlines''.  I really should know better than to trust project advertising by now, but since Django isn't backed by for-profit company (cough Java, Oracle) I figured if Django was stretching the truth it wouldn't be as bad as it was with Java.
+
+I haven't tried any other web frameworks for comparison.   So far Django is pretty good.
+
+
+\subsubsection{Python and Django}
+
+But I found out that Django is the widely used and among the most mature Python frameworks.  Django uses something called an Object relational layer to interface with Databases.  Unfortunately, Django pretty much expects to connect to a SQL-Like database.  It is possible to connect 
+
+I did get Django to work with CouchDB but the result was exceptionally slow.
+
+\subsubsection{Why use a database at all}
+
+Django expects a database to hold the majority of the underlying content that drives a web-server.  When running a web-server a database is a natural fit because of the following:
+
+A webserver must support multiple users accessing a commmon dataset simultaniously.
+If the server supports any changes on that common set then conflicts between different different users must be handled cleanly and efficiently.
+
+Any software that supports the above is a de-facto database.  But databases are difficult and time-consuming to get right.  So it's usually better to use a well tested solution than to bake your own.
+
+\subsubsection{Database Choice}
+
+Django's default database is SQlite.  The Django documentation stresses that while SQlite is a good choice for small  projects, that large projects really should use a more heavyweight solution like MySQL.  This is because SQlite does not scale well when working with large datasets or handling large numbers of requests.
+
+I initially chose CouchDB because the underlying entries into the couchDB database are JSON, and since I already had JSON data for my characters it seemed like a natural choice to use CouchDB
+
+Unfortunately, I found CouchDB not a good choice, Django expects to connect to a SQL-like database, and CouchDB is more of a Key-Value store.  It is possible to get CouchDB to behave like a SQL database using an elaborate adaption layer.  I did eventually get Django to interface with CouchDB, but the result was extremely slow and inefficient.
+
+I then abandoned CouchDB and decided to use a more mainstream soltion.  I settled on PostGresQL because Django seems to have very good support of PostGres, and the PostGres database itself seemed easier to set up and use than MySQL.  PostGres has the advantage over SQlite that it is more preformant with larger datasets or large ammounts of request.  It's disadvantage is that PostGres is somewhat more heavyweight(consumes more system resources by default) and requires a more elaborate setup.
+
+PostGres did indeed end up being a good choice.  It works very well for my purposes.
+
+\chapter{using postgresql database}
+
+
+from archlinux pagte
+
+Note: Commands that should be run as the postgres user are prefixed by [postgres]\$ in this article. You can change to the postgres user by running su - postgres as root. Alternatively, if you use sudo, run sudo -i -u postgres as a regular user.
+Before PostgreSQL can function correctly, the database cluster must be initialized:
+[postgres]\$ initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'
+Then start and enable postgresql.service.
+Warning: If the database resides on a Btrfs file system, you should consider disabling Copy-on-Write for the directory before creating any database.
+Create your first database/user
+
+Tip: If you create a PostgreSQL user with the same name as your Linux username, it allows you to access the PostgreSQL database shell without having to specify a user to login (which makes it quite convenient).
+Become the postgres user. Add a new database user using the createuser command:
+[postgres]\$ createuser --interactive
+
+
+
+Need : local/postgresql-jdbc  for java driver if I want to use pycharm
+
+also:  local/pgmodeler 0.8.2_beta-1, to provide interactive database management,
+
+
+
+[root@bigArch ewucal]# su postgres
+[postgres@bigArch ewucal]\$ createuser --interactive
+Enter name of role to add: dave
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) y
+Shall the new role be allowed to create more new roles? (y/n) n
+[postgres@bigArch ewucal]\$ exit
+
+[root@bigArch ewucal]# exit
+exit
+[dave@bigArch ewucal]\$ createdb calligraphy
+
+also needed to install community/python-psycopg2 to get python to natively connect with PostgreSQL database
+
+
+Had to edit settings.py to get postgresql database up
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'calligraphy',
+    }
+Remember, since I already built a user called dave, which shares the username 'dave' of my current user, then I don't need a username, or password to connect to my database.
+
+
+\subsection{What is an SQL database}
+
+A SQL database is a data store which behaves in a more-or-less consistant way between vendors.  SQL stands for Something Query Language?  SQL represents a common computing language used to interact with SQL-compliant databases.  The SQL standard does not dictate the method of implementation so different SQL databases can have completely different performance characteristics.
+
+\subsection{SQL Schema}
+
+Before an SQL database can be populated with data it must be assigned to a shema.  A schema sort of describes the nature of the data and how the different pieces of data relate to each other.  Once the schema is created the database can the be populated with data.
+
+
+\subsection{Python and JSON}
+JSON(Java Script Object Notation) is a popular data-interchange format used to store data in a format supported by many languages.
+
+I initially tried to store my data in something called a Pickle.  A pickle is a binary dump of a python object's state.  It is basically a serialized dump of the object's memory space.  The python documentation discourages pickling, because the data can become unusable if parts of the python language are changed between writing and reading of the pickled file.  I didn't follow that advice, because the purpose of pickling the data was storing it in an intermediate format between fetching   What surprised me was the pikled file I saved was so masive it consumed all available space on my hard drive.  
+
+I used this to store the the scrapped data in a few files.  It included all the prudent data I collected from the thousands of files I scrapped from the CADAL server.
+
+I used python's JSON formatter in order write my files in a format that is easily understandable and readable by other researchers.
+
+
+\chapter{javascript}
+
+Javascript is a programming language which most web-browsers are capable of running.  From the context of our project.  Javascript provides the interactivity of the website.  It is especially usefull because theses scripts respond programmatically to user inputs such as selecting, and dragging resizing, mouseover events etc.
+
+The Javascript standard is maintained by the Mozilla foundation, with the major browsers implementing the specification in whole or part.
+
+As javascript evolves it gains more features shared by other programming languages, which makes it easier to write for if you are more familiar with that other language.  I must admit, that I am very biased toward the set itterable feature in Java and Python.  It surprised me to discover that this feature became available in Mozilla Firefox in June 2012, Google Chrome in October 2014, and is still not available in Microsoft Internet Explorer/Edge as of May 2016
+
+https://en.wikipedia.org/wiki/Google\_Chrome\_release\_history
+http://website-archive.mozilla.org/www.mozilla.org/firefox\_releasenotes/en-US/firefox/13.0/releasenotes/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Set\#Browser\_compatibility
+
+Since my site uses this feature, only non-Microsoft browsers will aparently work on the site :(
+
+\subsection{Options for running a server}
+
+\subsubsection{running a server from school using webspace provided to students}
+
+Eastern Washington University does provide a limited website solution for students.  Unfortunately the websites produced by the EWU system are highly standardized in the front end, and static in nature.  The EWU website is inherintly inflexible and is therefore unsuitable for this project.
+
+\subsubsection{running a srever from the computer science building}
+
+While this is possible, it is not realistic.  The network administrator for the building could set me up with a website hosted in the computer science building, and I have asked him.  Unfortunately however, the nature of his position means the demands for his time are essentially unlimited.  Our network admin has work requirements from the administration, as well as the faculty and other students.  Additionally there are a myramid of regulations that restrict what he can and cannot do.  My thesis is not a high enough priority in the department to demand the (considerable effort) such a task would take.
+
+Fortunately, there are other options that do not tax me or the administration as heavily as running a server from the university.
+
+
+\subsubsection{running a server from home}
+
+It is possible for any computer connected to the internet to function as a webserver.  While hosting a webserver from home has some advantages, it also has several very significant disadvantages:
+
+\begin{itemize}
+    \item Advantages
+    \begin{itemize}
+        \item Does not cost additional money
+        \item Is comparitively easy to set up because I have direct access to the hardware.
+    \end{itemize}
+    \item Disadvantages
+    \begin{itemize}
+        \item Is cripplingly slow for anyone outside house
+        \item Violates contract I signed with my ISP.
+    \end{itemize}
+
+\end{itemize}
+
+\subsection{Renting space in a datacenter}
+
+The most cost-effective way to run a server is to rent computing resources from a datacenter.  The price varies considerably based on the srevices / capabilities provided.  Below are some examples:
+
+\begin{itemize}
+    \item Rent a physical computer
+    \begin{itemize}
+        \item Also called Dedicated Hosting
+        \item Price starts at \$50 / mo
+        \item You get complete controll of a dedicated computer at the Datacenter
+        \item You get a lot of hard drive space and RAM for the price: https://www.servermania.com/baremetal-dedicated-servers.htm
+        \item The computer you do get is slower than VPS for the price paid
+    \end{itemize}
+
+    \item Rent a virtual computer
+    \begin{itemize}
+        \item Also called a VPS(Virtual Private Server)
+        \item Gives you full root access to the macine
+        \item You can install anything you want and configure it any way you want
+        \item Reasonable cost:  \$5 - \$40 or so a month
+        \item Very good performance for price since computing resources are shared between VM's
+    \end{itemize}
+
+    \item Rent space on a virtual computer
+    \begin{itemize}
+        \item Also called a web hosting plan
+        \item Cheapest:  Free - \$5 or so a month
+        \item Most cost effective if performance and customization aren't critical
+        \item Easiest if you want a boilerplate site
+        
+    \end{itemize}
+
+    I chose to rent a VPS from Kloud51 for \$40 a month.  This was the cheapest option which still gave me the configurability and space (for all the images) that I needed.
+    
+    Note: Technology is swiftly evolving and competition is currently intense. The above is likely to change quickly.
+    
+\end{itemize}
+
+\section{Domain Name Server}
+
+Domain Name Servers (DNS's), also called Domain Name resolvers exist to make navigating the internet more user friendly.  The server that you rent in a datacenter gets its own IP address usually as part of the service provided.  An IP address is a unique 12, or 
+
+
+\subsection{Django}
+
+Python documentation recommended I use this simple server such as gunicorn, or uwsgi.  If I already had apache set-up(which I don't) it is easy to add Django to your existing website.  I chose uwsgi, because it's more popular, and faster, and easier to set up than Gunicorn in a new server.
+
+
+\subsection{wsgi}
+
+wsgi is a standalone server designed for hosting Python websites.   It is written in C and focuses on high performance and light footprint.  I installed this and ran the server.  Unfortunately I could not manage to get the server to work.  I could get it started, but it would not load my website, and consquently it would respont to queries by sending empty results.
+
+\subsection{Gunicorn}
+
+Gunicorn is written in Python and is considered slower than wsgi.  It is also less full-featured than wsgi.  Gunicorn lacks a web-server component.  It's purpose is to run a Django application, and respond to requests directed at that app.  I was able to easily get Gunicorn running and connected with my Django appliation.  However my website was still inaccessable for computers outside my server because it lacked a webserver.
+
+Interestingly.  If you only run Gunicorn you get a bare-bones django website that can only be accessed by the computer running Gunicorn.
+
+Gunicorn only becomes a website when married with a proxy server and a webserver.  The Gunicorn documentation recommends using something called Nginx.
+
+\subsection{Nginx}
+
+Nginx, pronounced ``EngineX''  is a combined webserver and proxy server.
+
+\paragraph{Nginx as a proxy}
+
+In it's role as a proxy, Nginx accepts incoming traffic and routes that traffic to another destination within the computer, using something called Unix Socket internal socket.
+
+
+\paragraph{what is a Unix Socket}
+
+A socket is the computing equivalent of a inside a mailroom.  Sockets receive and hold data in a FIFO (first-in-first out) manner.  These sockets primary purpose is to facilitate something called Inter-Process communication.  They are bi-directional and the idea is that two processes (seperate computing programs) both use the same Unix socket as a way of talking back and forth.
+
+The exact details of Unix Sockets are outside the scope of this Thesis.
+
+\paragraph{Nginx as a server}
+
+Nginx acts as an intermedery between the brower and the information the browser is trying to get to.
+
+
+\paragraph{This sounds complicated.  Who manages this?}
+
+Systemd is an operating system service that is basically manages all other programs that run on the computer.
+At startup the computer starts the nginx service.  Systemd also creates the Unix socket that nginx and gunicorn will use for communicating with each other.
+
+When Systemd detects a message waiting in Gunicorn's socket it starts the Gunicorn service and directs Gunicorn to handle the request.  Gunicorn then talks with Django directly.
+
+Systemd also watches over Gunicorn to make sure Gunicorn is actively responding to requests placed in the socket by Nginx.  If Gunicorn takes too long to process a request Systemd will Kill the Gunicorn service and start a fresh one.  Connect the new service the existing socket.
+
+\paragraph{The big picture}
+
+  Nginx receives requests from the browser, it then filters the requests and sends the Django relatet requests to Gunicorn.  Gunicorn then (does it actually run different django instances, or is it more of an intermediary) translates the incomming request into the wsgi format that django can understand.
+  
+  Gunicorn then forwards the client query to Django, which then processes the query and returns the results to Nginx which then sends the result back to the client.
+  
+  In the case of static files, nginx detects in the query string that the browser is trying to access a static file.  nginx then searches its existing static files for a match, then serves up the static file directly without having to involve Gunicorn or Django.
+  
+\paragraph{setting it all up}
+
+  Unfortunately, the above does not happen by magic and requires substantial setup in order to work properly.  Detaild config files are referenced in the backmatter, if your want to look at them.
+
+
+\subsection{The world wide web}
+
+For our purposes. the world wide web is defined as a vast communication network allowing computers worldwide the ability to send and receive information from each other.  The computers on this network are broadly defined as either server or client.
+
+\subsection{anatomy of a client}
+
+A client machine is a computer which people use to access the world wide web.  The client computer contains a program called a browser.  A browser is capable of sending and receiving information from a server.  The infromation received from the server is then displayed in a way humans find familiar to interact with.
+
+\subsection{anatomy a server}
+
+A server is simply a computer which exists on the internet that is capable of sending information on request to users.  The server computer has uses a piece of software called a   The organization and context of this data is what constitutes a website.  Webservers send two types of content to a user.  Static and dynamic.
+
+\subsection{The web browser}
+
+A web browser is a software program installed on the user's computer, which (when ran) permits the user a means of interacting with the world-wide web.  
+
+
+\subsubsection{the web page}
+
+A web page is an individual document composed of markup text which instructs the web browser on how to construct a web page
+
+\chapter{Markup Text}
+
+Fundamentel to the internet is the concept of markup text.  When a browser downloads a 
+
+Hypertext markup Language, or HTML is the basic building block of a website.  The HTML defines the content of a website.  A web page 
+
+\chapter{css}
+
+Cascading Style Sheets describe to the browser how the images and text of a website should be organized.  
+
+
+
+
+\subsubsection{static content}
+
+static content consists of documents necessary for the generation of a website that do not change fequently or at all.  The images representing the calligraphy documents we have do not change, so they are stored statically.
+
+\paragraph{images}
+
+Images are prehaps the most well-known form of static content.  The server does not discriminate between images and other static objects when serving them.
+
+
+\subsection{javascript libraries}
+
+Javascript libraries exist to simplify and steamline the process of writing Javascript for a website.
+
+Javascript Libraries serve the samem purpose as libraries for any programming language
+
+Javascript libriries are modular pieces which preforms tasks which are routine and are generic enough to be integrated into a wide variety of application
+
+A great many javascript libraries exist.  One must be carefull which libraries one uses though, because some libraries can interfere with each other.  
+
+I ended up using Jquery because it is designed around the concept of a library echosystem.  This means that all jquery apps conform to a common standard and are prevented from conflicting with each other.
+
+Plus the Jquery echosystem is quite large and diverse.  And Jquery plugins are plentiful, free and easy to install.
+
+
+\subsubsection{jquery}
+
+\paragraph{jquery-ui}
+
+Is a jquery package made by the jquery foundation.  It is used to provide users with interactive objects that users can manipulate.  
+
+\paragraph{jrac}
+
+JRAC(Jquery Resize and Crop) is a a jquery package that uses jquery-ui to provide the user an interactive window which users can zoom in / zoom in and out of a loaded image, as well as move a transparrent crop-box around the screen.
+
+I couldn't use this library directly, because it's application is limited toward cropping a specific part of one image from another.
+
+But the application did have some components I needed.  Mainly the ability to zoom / pan around an existing image.  As well as a smaller sub box that you can manipulate to draw a bounding box around various parts of an image.
+
+\paragraph{my interface inspired by jrac}
+
+I basically re-wrote the jrac code so that the window painted character data from 
+
+\subsection{sending data back to the webserver}
+
+As mentioned previously. Django responds to browser requests by processing the URL string sent to the server, and generating a HTML page based on that URL.  The generated page is then sent back to the browser over the internet.
+
+The browser then interprets and displays the HTML page.  If the page contains JavaScript that JavaScript is executed.  This results in interactive application which is mostly client-facing.  This means that communication between the browser and server is asynchronous.
+
+The browser is capable of sending arbitrary data to a webserver bundled inside something called an HTTP request
+
