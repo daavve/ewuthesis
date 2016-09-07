@@ -8,14 +8,7 @@
 
     Answer:  I propose a system which makes checking related characters intuitive and fast.  I present CCT(Character Comparison Tool).  CCT provides the researcher with a high quality zoomable and navigatable image of the work.  Overlayed on this image are bounding boxes representing individual characters in the database.  Selecting any of these boxes brings up a carrousel of similar images at the bottom of the page.  Selecting any of these characters brings up the source document for that character in a new window, with source character already selected(todo).  
 
-3)  Character comparison (Kosuke's Task):
-    Question:   Given a Calligraphic work <Kosuke's book> featuring a collection of characters hand-copied from a variety of parent works.
-                Given that none of the originals exist, and that both Kosuke's book as well as the parent works we have available are hand copied one or more times from the originals.
-                For any given Character in Kosuke's book, can we determine source document and specific character it was copied from?
-                
-Why people might find this important:
-    *  The character's in Kosuke's are considered the "best" examples of calligraphy by Wang-Xu.
-    *  Understanding which source documents contributed to this book would yield a deeper understanding of which scripts contributed most strongly to this collection of exemplar characters.
+3
     *  A strong market exists for calligraphic works.  Works certified as authentic(nearly original) can command high prices, which creates an incentive for forgeries.  A lack of good records, loss of original artifacts, and the inconsistencies in duplication and distribution make the certification challenge extremely difficult.
     
 Previous Work:
@@ -29,13 +22,6 @@ Previous Work:
             +signature verification
             
 
-Process:  What I had to do:
-    1)  Get together a collection of characters origionally written by 王羲之.
-    2)  Scan Kosuke's book
-    3)  Organize the characters in Kosuke's book as well CADAL characters found by other means in a consistent format
-    
-        Build a tool which allows the user to view individual calligraphic pages, characters, bounding boxes for characters, all displayed in a single page.
-    
 What I found:
     1)  There exist two databases which have segmented characters written by 王羲之.
     2)  CADAL, and Other guys < never was able to get in touch with other guys >
@@ -55,17 +41,16 @@ What I was able to do:
         *  Of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  <also already known>
     
     My results:
-        *  I have failed in my attempt to reliably identify any of the source characters in Kosuke's book.
-        
-        *  I have gained useful insight into the problem though.
-            +I transformed data from CADAL into a format which serves my purpose.
-            +I transformed the CADAL data in JSON a general-purpose format that other users can use for analysis.
+        *  I created a website that premits browsing uploaded images of calligraphy texts.
+            +Bounding boxes are overlayed on top of characters on the 
+                *These bounding boxes follow the 
             
     My future work:
-        *  Make more progress in my calligraphy website.
-        *  Build a rough similarity checking tool to evaluate fitness of characters.
-        *  Enable crowd-sourcing of segmentation and attribution data, as well as validation of said data
-        *  Incorperate a segmentation method for breaking characters apart.
+        *  Preform user surveys and usability testing to measure the improvement (if any) over existing methods
+        *  Create an interface which enables website users to modify existing data on the site.
+        *  Use a learning algorithm to "guess" the position of un-annotated characters.
+        *  OCR performance on calligraphic characters is abysmal.  Attack this problem
+        *  Use a comparison algorithm to "measure" and perhaps draw attention to important similarities / differences between characters.
 
 
 Why the website?
