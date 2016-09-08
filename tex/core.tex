@@ -138,7 +138,28 @@ What I found:
                 Bounding boxes frequently overlap
                 Bounding boxes frequently cut off portions of the character.                
                 
-            
+        
+        
+        My Website overview:
+            My website is fairly typical and includes the following:
+                Front-End:  Jquery based user-interface
+                Back-End:   Django, Gunicorn, and Nginx with a PostGreSQL database
+                
+            When the user is browsing an individual page he / she sees a calligraphy page, inside a resizable window.
+                Green boxes are overlayed on top of all characters in this page that map to the Character Database.
+                
+                The page is naturally navigatable with a zoom in/out bar and dragable window.
+                Everytime the page is dragged or the zoom level is changed, all character boxes are adjusted so they stay precisely the same position and size with respect to the parent page.
+                
+                As the user mouses over a character, it's box turns blue indicating it is a cantidate for selection.
+                
+                Once a character is selected a slider, it's box turns red. A slider at the bottom of the screen becomes populated with characters which are attributed to that same author
+                
+                When any character in the slider is clicked it opens up a new browser window showing the parent page.  (I really think an ajaxy thing where we load the new image into a side-by-side window would be much better)
+                
+                This allows another researcher to (hopefully) easily and (also hopefully) comprehensively compare a large number of similar, but different characters, in order to discern the subtle differences between and among Calligraphic works
+                
+                
 
 
 
