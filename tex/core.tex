@@ -8,8 +8,15 @@
 
     Answer:  I propose a system which makes checking related characters intuitive and fast.  I present CCT(Character Comparison Tool).  CCT provides the researcher with a high quality zoomable and navigatable image of the work.  Overlayed on this image are bounding boxes representing individual characters in the database.  Selecting any of these boxes brings up a carrousel of similar images at the bottom of the page.  Selecting any of these characters brings up the source document for that character in a new window, with source character already selected(todo).  
 
-3
+Motivation:
     *  A strong market exists for calligraphic works.  Works certified as authentic(nearly original) can command high prices, which creates an incentive for forgeries.  A lack of good records, loss of original artifacts, and the inconsistencies in duplication and distribution make the certification challenge extremely difficult.
+    
+Why the website?
+    * Many historians are not computer savy, so an interface they are already familiar with may feel more natural to them.
+    * Relieves the burden of having to download, install, configure, and debug experimental software.
+    * Accessible to anyone who uses the internet.
+    * Provide  a platform to which many people can use and contribute to.
+
     
 Previous Work:
     1) Digital Libraries.  Online repositories of information provided over the internet.
@@ -23,28 +30,71 @@ Previous Work:
             
 
 What I found:
-    1)  There exist two databases which have segmented characters written by 王羲之.
+    1)  There exist two databases which have positional information of Chinese calligraphy.
     2)  CADAL, and Other guys < never was able to get in touch with other guys >
         *CADAL calligraphy page contains thousands of pages of scanned text, as well as over 100K Chinese characters as well as associated metadata.
+
+    Cadal has many usefull features that could fit my project:
+        *)  The cadal website has the ability to search for individual characters by submitting a variety of queries.
+            +)  By character
+            +)  By author
+            +)  By dynesty, etc.
+
+
+    Why CADAL does not meet the needs of my project:
+        1)  Work browsing interface does not allow for easy selection of an individual character from an existing work.
+        2)  The character search page is limited to only the first 18 results at any time.
+            *The character images themselves are generally low resolution, and highly artifacted, with some characters exibhiting this trait more profoundly than others.
+        3)  When the source page, with the bounding box is presented, overlayed in the source document, you get the following issues:
+            *  Source page is low resolution
+            *  The bounding box is quite thick and frequently obscures edges of the character
+            *  Displayed page is quite small, and the interface fustrates efforts to enlarge, or print them.
+        4)  High resolution images of pages exist on the CADAL server
+            * But only reduced resolution versions of these images are accessable when browsing the website.
+                + These available images suffer from the following quality issues:
+                    -Critical details are fuzzed, during downsampling
+                    -Lossy JPEG compression further degrades image by smoothing textures, and introducing artifacts such as ringing
+                    
+
+
+
+
+    Problems I had to overcome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Unexpected problems that violated my initial assumptions:
         * not all calligraphic works have a text script accompanying them
         * not all calligraphic works with text have individual characters mapped
         * of those calligraphic works with characters mapped
             -pages only have a portion of characters mapped.
-            -Quality of mapped characters is inconsistent
-                * many characters have different boarders in image than attached coordinates
-                * Bounding boxes frequently overlap, and sometimes cut off important parts of a character.
+            -Quality of mapped characters is generally quite good except:
+                Bounding boxes frequently overlap
+                Bounding boxes frequently cut off portions of the character.
 
 What I was able to do:
     My findings:
-        * There exists enough work to compare many dozen of the same characters, but from different works by the same author, on a character by character basis. <This is already known>
-        *  Of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  <also already known>
+        * There exists enough work to compare many dozen of the same characters, from and within works of the same author, on a character by character basis. <This is already known>
+        *  Many of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  <also already known>  The Chinese language contains a vast variety of characters, many of which are used only rarely.
     
     My results:
         *  I created a website that premits browsing uploaded images of calligraphy texts.
             +Bounding boxes are overlayed on top of characters on the 
-                *These bounding boxes follow the 
-            
+                *These bounding boxes follow characters during navigation (Zoom and drag)
+            +To the best of my knowledge, this is the first application to allow easy and direct navigation between similar characters on scanned high resolution, zoomable images.
+
+
     My future work:
         *  Preform user surveys and usability testing to measure the improvement (if any) over existing methods
         *  Create an interface which enables website users to modify existing data on the site.
@@ -52,11 +102,6 @@ What I was able to do:
         *  OCR performance on calligraphic characters is abysmal.  Attack this problem
         *  Use a comparison algorithm to "measure" and perhaps draw attention to important similarities / differences between characters.
 
-
-Why the website?
-    * Accessible to anyone who uses the internet.
-    * Provide  a platform to which many people can contribute to.
-    * Does not require the user to install specific software.
 
 
 
