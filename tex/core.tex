@@ -113,44 +113,54 @@ What I found:
             
             
             I eventually discovered that the CADAL show page from does the following before drawing the image on the screen:
-                *) after the "show button" requests some information about the parent page.
+                *) The user clicks the "show" button indicating the desire to see the parent page with a box drawn abound the current character.
+                *) A javaScript app inside the site sends an Asynchronous HTTP response to the CADAL with the parent page as the payload.
                 *) The script receives the response "new" or "old" from the CADAL server
                 *) The script then passes the Character coordinates, as well as the above string to a SWF applet
-                *) The SWF applet loads the parent page, and resizes the image to 800px wide, aspect ratio is retained
-                *) The SWF applet tests wether the string just passed is "new", or "old"
+                *) The SWF applet loads the parent page, and resizes the image to 800px wide, aspect ratio is maintained
+                *) The SWF applet tests wether the string just passed in is "new", or "old"
                     *Depending on the above new/old result the SWF applet performs one of two different transformations to the coordinates
                     *Using the newly transformed coordinates the SWF applet draws a bounding box around the character.
-                In order to examinen the behaviour of the SWF applet, I had to use a SWF decompiler.
+                In order to examinen the behaviour of the SWF applet, I had to use a SWF decompiler, and examine the internals of the SWF applet.
             
                 Based on the above information about the behaviour of the bounding box drawing mechanism I performed my own set of queries to determine whether any one of my page images was "new", or "old".
-                *Using this new/old information as well as the corresponding coordinate transformation embedded inside the SWF app I was able to transform the relative coordinates I fetched earlier to absolute coordinates correctly matching the pixel locations of the character in the highest resolution available from the CADAL site.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Unexpected problems that violated my initial assumptions:
-        * not all calligraphic works have a text script accompanying them
-        * not all calligraphic works with text have individual characters mapped
+                *Using this new/old information as well as the corresponding coordinate transformation embedded inside the SWF app I was able to transform the relative coordinates I fetched earlier to absolute coordinates correctly matching the pixel locations of the character in the high resolution images I'd downloaded previously.
+                
+                
+                I now had all relevant character information, as well as coresponding work information and images to build my interface.
+                
+    A cursory examination of the reconstructed database reveiled much of the DATA in CADAL is incomplete for the following reasons:
+        * not all calligraphic works have a text script or title accompanying them
+        * A large portion (Perhaps an overwhelming majority) of pages with characters lack corresponsing database entries for at least some, and occasionally as much as 1/2 or more of characters in an image.
         * of those calligraphic works with characters mapped
             -pages only have a portion of characters mapped.
             -Quality of mapped characters is generally quite good except:
                 Bounding boxes frequently overlap
-                Bounding boxes frequently cut off portions of the character.
+                Bounding boxes frequently cut off portions of the character.                
+                
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 What I was able to do:
     My findings:
-        * There exists enough work to compare many dozen of the same characters, from and within works of the same author, on a character by character basis. <This is already known>
-        *  Many of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  <also already known>  The Chinese language contains a vast variety of characters, many of which are used only rarely.
+        * There exists enough data in the CADAL set to compare many of the same characters, attributed to the same author, accross a variety of texts.
+        *  Many of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  The Chinese language contains a vast variety of characters, many of which are used infrequently.
+        *  The CADAL character set provides positional data for a only a very small portion: probably less than 10\% of retrieved calligraphy pages.  (Need Statistics here)
+        *  Of the pages with CADAL character positional information, a significant portion of the characters presebt are not reflected in the character database.
     
     My results:
         *  I created a website that premits browsing uploaded images of calligraphy texts.
@@ -158,9 +168,10 @@ What I was able to do:
                 *These bounding boxes follow characters during navigation (Zoom and drag)
             +To the best of my knowledge, this is the first application to allow easy and direct navigation between similar characters on scanned high resolution, zoomable images.
 
+        ***** TODO: Preform user surveys and usability testing to measure the improvement (if any) over existing methods *****
 
     My future work:
-        *  Preform user surveys and usability testing to measure the improvement (if any) over existing methods
+        
         *  Create an interface which enables website users to modify existing data on the site.
         *  Use a learning algorithm to "guess" the position of un-annotated characters.
         *  OCR performance on calligraphic characters is abysmal.  Attack this problem
