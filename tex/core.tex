@@ -6,13 +6,13 @@
                 Kosuke presented the image of many different books or stacks of paper, with the researcher flipping between them,  maybe using a magnifying glass to compare and contrast each of the characters.  A large portion of the researchers time becomes wasted in scanning the physical pages over and over again.
 
 
-    Answer:  I propose a system which makes checking related characters intuitive and fast.  I present CCT(Character Comparison Tool).  CCT provides the researcher with a high quality zoomable and navigatable image of the work.  Overlayed on this image are bounding boxes representing individual characters in the database.  Selecting any of these boxes brings up a carrousel of similar images at the bottom of the page.  Selecting any of these characters brings up the source document for that character in a new window, with source character already selected(todo).  
+    Answer:  I propose a system which makes checking related characters intuitive and fast.  I present CCT(Character Comparison Tool).  CCT provides the researcher with a high quality zoom-able and navigable image of the work.  Overlay-ed on this image are bounding boxes representing individual characters in the database.  Selecting any of these boxes brings up a carousel of similar images at the bottom of the page.  Selecting any of these characters brings up the source document for that character in a new window, with source character already selected(to-do).  
 
 Motivation:
     *  A strong market exists for calligraphic works.  Works certified as authentic(nearly original) can command high prices, which creates an incentive for forgeries.  A lack of good records, loss of original artifacts, and the inconsistencies in duplication and distribution make the certification challenge extremely difficult.
     
 Why the website?
-    * Many historians are not computer savy, so an interface they are already familiar with may feel more natural to them.
+    * Many historians are not computer savvy, so an interface they are already familiar with may feel more natural to them.
     * Relieves the burden of having to download, install, configure, and debug experimental software.
     * Accessible to anyone who uses the internet.
     * Provide  a platform to which many people can use and contribute to.
@@ -34,25 +34,25 @@ What I found:
     2)  CADAL, and Other guys < never was able to get in touch with other guys >
         *CADAL calligraphy page contains thousands of pages of scanned text, as well as over 100K Chinese characters as well as associated metadata.
 
-    Cadal has many usefull features that could fit my project:
-        *)  The cadal website has the ability to search for individual characters by submitting a variety of queries.
+    CADAL has many useful features that could fit my project:
+        *)  The CADAL website has the ability to search for individual characters by submitting a variety of queries.
             +)  By character
             +)  By author
-            +)  By dynesty, etc.
+            +)  By dynasty, etc.
 
 
     Why CADAL does not meet the needs of my project:
         1)  Work browsing interface does not allow for easy selection of an individual character from an existing work.
         2)  The character search page is limited to only the first 18 results at any time.
-            *The character images themselves are generally low resolution, and highly artifacted, with some characters exibhiting this trait more profoundly than others.
-        3)  When the source page, with the bounding box is presented, overlayed in the source document, you get the following issues:
+            *The character images themselves are generally low resolution, and highly artifact-ed, with some characters exhibiting this trait more profoundly than others.
+        3)  When the source page, with the bounding box is presented, overlay-ed in the source document, you get the following issues:
             *  Source page is low resolution
             *  The bounding box is quite thick and frequently obscures edges of the character
-            *  Displayed page is quite small, and the interface fustrates efforts to enlarge, or print them.
+            *  Displayed page is quite small, and the interface frustrates efforts to enlarge, or print them.
         4)  High resolution images of pages exist on the CADAL server
-            * But only reduced resolution versions of these images are accessable when browsing the website.
+            * But only reduced resolution versions of these images are accessible when browsing the website.
                 + These available images suffer from the following quality issues:
-                    -Critical details are fuzzed, during downsampling
+                    -Critical details are fuzzed, during down-sampling
                     -Lossy JPEG compression further degrades image by smoothing textures, and introducing artifacts such as ringing
         5)  The CADAL website exists in mainland China.  Any download of large files(Files larger than about 500Kb), are severely slowed by the Great firewall of china.
             *Many of the image files were larger than 3Mb, which means they could take many minutes of waiting to download and view
@@ -74,7 +74,7 @@ What I found:
             Author:
             Image:
             Image of Parent document:
-            Locational position of character in parent document.
+            Location position of character in parent document.
         
         2)  Image information with the following:
             Author,
@@ -86,52 +86,52 @@ What I found:
                 Name of Work,
                 Transcript of work
                 
-            The simpleist and easiest way to acquire the above information is to get direct access to the information in CADAL, there are 3 ways this is typically done, in order of descending preference.
-            *)  The user is given the contents of the database in an DIF(Data Interchange Format), this is usually, but not always JSON(JavaScript Object Notation), it can also be in CSV(Commas Seperated Values), or a variety of other formats.
+            The simplest and easiest way to acquire the above information is to get direct access to the information in CADAL, there are 3 ways this is typically done, in order of descending preference.
+            *)  The user is given the contents of the database in an DIF(Data Interchange Format), this is usually, but not always JSON(JavaScript Object Notation), it can also be in CSV(Commas Separated Values), or a variety of other formats.
                 +The purpose of DIF, is to distribute a representation of the data that is platform agnostic, and can  therefore be used in a variety of contexts.
-            *)  A user is given direct, read-only access to the database, curated to the tables and rows the person needs.  This is prefered, since it ensures the most timely and accurate information from the database.
-            *)  The user is given a database dump.  This is generated by the Database administrator.  This dump contains a list of SQL statements, that when executed generate a repleca of requested parts of the database, on the users machine.
+            *)  A user is given direct, read-only access to the database, curated to the tables and rows the person needs.  This is preferred, since it ensures the most timely and accurate information from the database.
+            *)  The user is given a database dump.  This is generated by the Database administrator.  This dump contains a list of SQL statements, that when executed generate a replica of requested parts of the database, on the users machine.
 
-            *)  Send a variety of http requests to the server, capture the returned pages and attempt to extrapolate the origional database from the results.  This is refered to as web-scraping.
+            *)  Send a variety of HTTP requests to the server, capture the returned pages and attempt to extrapolate the original database from the results.  This is refereed to as web-scraping.
             
-            CADAL did not offer it's data in any interchange format.  I was unsucessfull in my attempts to either get access to the Database, or a dump of my requires files.  I therefore had to resort to web-scraping.
+            CADAL did not offer it's data in any interchange format.  I was unsuccessful in my attempts to either get access to the Database, or a dump of my requires files.  I therefore had to resort to web-scraping.
             
             The web scraping process is made up of the following steps and is generally considered more of an art than a Science.
-                1)  Experiment with the website.  Discover the patern of requests that return pages carying the information you need.
+                1)  Experiment with the website.  Discover the pattern of requests that return pages carrying the information you need.
                 2)  Generate a list of requests based on step 1
                 3)  Send the requests in step 2 to the website, and record the response.
                 4)  Use a tool called an HTML parser to extract the required information from retrieved files.
                     *I stored the results of this step in a JSON file.
                 
-            I also needed to harvest the images.  Fortunately, the images lived in a part of the website that was static and enabled navigation throughout the folder structure.  I found the list files / folders we needed from the web scraping performed earlier.  It became a matter of bulk http requesting the images in specific folders.
+            I also needed to harvest the images.  Fortunately, the images lived in a part of the website that was static and enabled navigation throughout the folder structure.  I found the list files / folders we needed from the web scraping performed earlier.  It became a matter of bulk HTTP requesting the images in specific folders.
             
             In total the static part of the download consisted of just over 130K images, and totaled about 40Gb of data.  This bulk download took about 2 weeks due to the very high slowdown caused by the Great Firewall of China.
             
-            I then imported the results of the parsed HTML pages into a Relational Database. (PostGreSQL).  Then I linked the character and page database rows with the images bulk downloaded earlier.
+            I then imported the results of the parsed HTML pages into a Relational Database. (PostgreSQL).  Then I linked the character and page database rows with the images bulk downloaded earlier.
             
-            I performed ad-hawk verification, I ran a handfull of quieries from the CADAL website, and verified that the results matched the same queries in my newly generated database.   Everything matched, including the bounding box coordinates from the CADAL site.  However, the bounding boxes generated by my data were in different locations to the bounding boxes found on CADAL.
+            I performed ad-hawk verification, I ran a handful of queries from the CADAL website, and verified that the results matched the same queries in my newly generated database.   Everything matched, including the bounding box coordinates from the CADAL site.  However, the bounding boxes generated by my data were in different locations to the bounding boxes found on CADAL.
             
             
             I eventually discovered that the CADAL show page from does the following before drawing the image on the screen:
                 *) The user clicks the "show" button indicating the desire to see the parent page with a box drawn abound the current character.
-                *) A javaScript app inside the site sends an Asynchronous HTTP response to the CADAL with the parent page as the payload.
+                *) A JavaScript app inside the site sends an Asynchronous HTTP response to the CADAL with the parent page as the payload.
                 *) The script receives the response "new" or "old" from the CADAL server
-                *) The script then passes the Character coordinates, as well as the above string to a SWF applet
+                *) The script then passes the Character coordinates, as well as the above string to a SWF(Shock-Wave Flash) applet
                 *) The SWF applet loads the parent page, and resizes the image to 800px wide, aspect ratio is maintained
-                *) The SWF applet tests wether the string just passed in is "new", or "old"
+                *) The SWF applet tests whether the string just passed in is "new", or "old"
                     *Depending on the above new/old result the SWF applet performs one of two different transformations to the coordinates
                     *Using the newly transformed coordinates the SWF applet draws a bounding box around the character.
-                In order to examinen the behaviour of the SWF applet, I had to use a SWF decompiler, and examine the internals of the SWF applet.
+                In order to examine the behavior of the SWF applet, I had to use a SWF decompiler, and examine the internals of the SWF applet.
             
-                Based on the above information about the behaviour of the bounding box drawing mechanism I performed my own set of queries to determine whether any one of my page images was "new", or "old".
+                Based on the above information about the behavior of the bounding box drawing mechanism I performed my own set of queries to determine whether any one of my page images was "new", or "old".
                 *Using this new/old information as well as the corresponding coordinate transformation embedded inside the SWF app I was able to transform the relative coordinates I fetched earlier to absolute coordinates correctly matching the pixel locations of the character in the high resolution images I'd downloaded previously.
                 
                 
-                I now had all relevant character information, as well as coresponding work information and images to build my interface.
+                I now had all relevant character information, as well as corresponding work information and images to build my interface.
                 
-    A cursory examination of the reconstructed database reveiled much of the DATA in CADAL is incomplete for the following reasons:
+    A cursory examination of the reconstructed database revealed much of the DATA in CADAL is incomplete for the following reasons:
         * not all calligraphic works have a text script or title accompanying them
-        * A large portion (Perhaps an overwhelming majority) of pages with characters lack corresponsing database entries for at least some, and occasionally as much as 1/2 or more of characters in an image.
+        * A large portion (Perhaps an overwhelming majority) of pages with characters lack corresponding database entries for at least some, and occasionally as much as 1/2 or more of characters in an image.
         * of those calligraphic works with characters mapped
             -pages only have a portion of characters mapped.
             -Quality of mapped characters is generally quite good except:
@@ -142,37 +142,37 @@ What I found:
         
         My Website overview:
             My website is fairly typical and includes the following:
-                Front-End:  Jquery based user-interface
-                Back-End:   Django, Gunicorn, and Nginx with a PostGreSQL database
+                Front-End:  jQuery based user-interface
+                Back-End:   Django, Gunicorn, and Nginx with a PostgreSQL database
                 
-            When the user is browsing an individual page he / she sees a calligraphy page, inside a resizable window.
-                Green boxes are overlayed on top of all characters in this page that map to the Character Database.
+            When the user is browsing an individual page he / she sees a calligraphy page, inside a re-sizable window.
+                Green boxes are overlay-ed on top of all characters in this page that map to the Character Database.
                 
-                The page is naturally navigatable with a zoom in/out bar and dragable window.
-                Everytime the page is dragged or the zoom level is changed, all character boxes are adjusted so they stay precisely the same position and size with respect to the parent page.
+                The page is naturally navigable with a zoom in/out bar and drag-able window.
+                Every-time the page is dragged or the zoom level is changed, all character boxes are adjusted so they stay precisely the same position and size with respect to the parent page.
                 
-                As the user mouses over a character, it's box turns blue indicating it is a cantidate for selection.
+                As the user mouses over a character, it's box turns blue indicating it is a candidate for selection.
                 
                 Once a character is selected a slider, it's box turns red. A slider at the bottom of the screen becomes populated with characters which are attributed to that same author
                 
-                When any character in the slider is clicked it opens up a new browser window showing the parent page.  (I really think an ajaxy thing where we load the new image into a side-by-side window would be much better)
+                When any character in the slider is clicked it opens up a new browser window showing the parent page.  (I really think an Ajax thing where we load the new image into a side-by-side window would be much better)
                 
                 This allows another researcher to (hopefully) easily and (also hopefully) comprehensively compare a large number of similar, but different characters, in order to discern the subtle differences between and among Calligraphic works
                 
 
 What I was able to do:
     My findings:
-        * There exists enough data in the CADAL set to compare many of the same characters, attributed to the same author, accross a variety of texts.
+        * There exists enough data in the CADAL set to compare many of the same characters, attributed to the same author, across a variety of texts.
         *  Many of the characters encoded in CADAL Calligraphy many characters are single specimens and therefore defy individual comparisons.  The Chinese language contains a vast variety of characters, many of which are used infrequently.
         *  The CADAL character set provides positional data for a only a very small portion: probably less than 10\% of retrieved calligraphy pages.  (Need Statistics here)
-        *  Of the pages with CADAL character positional information, a significant portion of the characters presebt are not reflected in the character database.
+        *  Of the pages with CADAL character positional information, a significant portion of the characters present are not reflected in the character database.
     
     My results:
-        *  I created a website that premits browsing uploaded images of calligraphy texts.
-            +Bounding boxes are overlayed on top of characters on the 
+        *  I created a website that permits browsing uploaded images of calligraphy texts.
+            +Bounding boxes are overlay-ed on top of characters on the 
                 *These bounding boxes follow characters during navigation (Zoom and drag)
                 *Zooming is continuous, not discrete, this way researchers can see the two characters side-by-side for a more effective comparison
-            +To the best of my knowledge, this is the first application to allow easy and direct navigation between similar characters on scanned high resolution, continuously zoomable images.
+            +To the best of my knowledge, this is the first application to allow easy and direct navigation between similar characters on scanned high resolution, continuously zoom-able images.
 
         ***** TODO: Preform user surveys and usability testing to measure the improvement (if any) over existing methods *****
 
