@@ -54,12 +54,40 @@ What I found:
                 + These available images suffer from the following quality issues:
                     -Critical details are fuzzed, during downsampling
                     -Lossy JPEG compression further degrades image by smoothing textures, and introducing artifacts such as ringing
+        5)  The CADAL website exists in mainland China.  Any download of large files(Files larger than about 500Kb), are severely slowed by the Great firewall of china.
+            *Many of the image files were larger than 3Mb, which means they could take many minutes of waiting to download and view
+        
+        
+    It might have been possible to write a web gateway, which provides intermediate access to CADAL.  This could have overcome the image resolution problem, but could not easily solve the incomplete query problem.
+    
+    To summarize, I faced 3 problems when accessing the CADAL website directly:
+        *  Low quality images
+        *  Incomplete query results for characters
+        *  Bounding boxes which frequently obstructed portions of characters.
                     
 
 
 
-
-    Problems I had to overcome
+    In order to product my own website I needed to acquire the following things from CADAL:
+        1)  Character information with the following:
+            Mark:
+            Author:
+            Image:
+            Image of Parent document:
+            Locational position of character in parent document.
+        
+        2)  Image information with the following:
+            Author,
+            Work info:
+                Page of work
+                Parent document
+            
+            The following was sometimes available:
+                Name of Work,
+                Transcript of work
+                
+        
+            
 
 
 
