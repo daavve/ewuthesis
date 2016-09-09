@@ -1,11 +1,34 @@
-\chapter{introduction}
 
-Currently comparing individual characters against each other is laborious and time-consuming for calligraphy researchers.  The current process involves either flipping back and forth between several different works, or alternatively.  Making photocopies of documents which are then cut and labeled according to Meaning, Authorship, work ext.
+Image Datasets are used extensively in both Research and Industry to push the frontiers of machine learning.  Additionally searchable images help e-commerce companies such as <newcite> find visually similar styles for customers.
 
-This project provides a tool which expert calligraphy researchers, (or indeed any sort of researcher for that matter) can compare large variety of similar characters.
+Today thousands of image datasets exist containing millions of individual photos available online to researchers and industry.  <newcite>.  These datasets typically consist of images and associated metadata(usually text) annotating the details of the picture in a structured way that computer can readily interpret.  An important purpose of these datasets is to permit is to reduce duplication of effort, as well improve reproducability of research.  While a great many datasets exist for scanned manuscripts.  Relatively few of these contain chinese calligraphy.
 
-There exist tools out there which compare objects against each other for visual similarity and match similar objects using a distance metric.  An example of this is shopping sites which use image recognition, in adition standard filters to help shoppers find what they want more quickly.
+The places that you can find collections of chinese calligraphy documents online:  Meuseum online collections such as the metropolitan meusium of art.  Bulk archiving sites such as archive.org.  The information from collections tends to be relatively unstructured and incomplete from a data processing standpoint.  This is the result of such online collections being optimized for interactive browsing and not bulk analysis.
 
-The field of photographic facial recognition has absoultely imense research and many programs exist which assist the user by interactively tagging the different people present in photos.
+A great many datasets of written chinese text exist, but I found only two which contain Chinese calligraphy.  Of these two sets, I was only able to gain access to one, the CADAL Calligraphy database.  This Calligraphy contains importantly, images of works, combined with meta-information indicating the position of each character on the page, as along with other pertinant information.  This metadata is critical, because machines cannot readily interpret the calligraphy images.  Additionally, many of the texts are very old, and the language has changed enought that even native speakers may have trouble desciphering the script.
 
-This is to the best of my knowledge the first system which combines the two above principles.  This allows researchers to interactively annotate objects or images according to the needs of thier specific project.
+Unfortunately, my access to this calligraphy database was mediated by the CADAL website.  This website presented a rich variety of data about individual characters, such as location within parent work.  Like the Meusium collections mentioned earlier, the CADAL images and Database were very much curated by a web front-end.  CADAL provides no option export data into a computer-readable form.  My requests for one remain unanswered.
+
+While some questions could be answered using the website provided a great many could not:
+
+    Questions that can be answered:
+        What are 18 examples of the character "" written by ""
+        What works do you have written by ""?
+    
+    Questions that cannot easily be answered:
+        What is the position of all characters on a given page?
+        How many scanned pages lack any character position information.
+
+
+I used a technique called web-scraping to make an indirect copy of the CADAL Character and Works database.  With this copy I am able to answer the above questions.  Additionally, since I now posses a copy the whole database, I can now make the database available in a form that other computer researchers can use directly.
+
+
+The purpose of this thesis is to two-fold.  The first is to assist historians who wish to quickly and easily compare the details of two or more characters attributed to the same author.
+
+The second is to present the artifacts of my research in a way that permits easy duplication and validation of my work.  In this way future researchers, and the public can use and adapt my work to better serve their individual needs.
+
+
+
+
+
+
