@@ -1,6 +1,60 @@
 
 Calliset first required an image catalog, along with a corresponding database of character name, attributions, and positions in order to be effective.  In order to reduce the burden on my historian, I first searched the available research and image datasets.  This way I could aviod both unneccessary work and duplication of effort.
 
+
+\chapter{existing collections}
+
+\section{private collections}
+
+\subsection{Artifacts}
+
+\subsection{Books}
+
+\section{World Digital library Project}
+
+\subsection{Metropolitan Meausium of Art}
+
+\section{China Million Book Project}
+
+\subsection{CADAL Digital Library}
+
+\subsubsection{Cadal Calligraphic Database}
+
+\section{Available collections of documents}
+
+Several measeums have digitized thier collections and posted these collections on the Internet.
+
+Digital Public Library:
+Metropolitan Measeum of Art:
+CADAL \& the million book project:
+
+\section{available collections of Chinese Calligraphy}
+
+\subsection{Metropolitan Meauseum of art history}
+
+This website has digitized and posted online a large portion of thier collection.  The data on this website is broken into works, with a work consisting of several pages.  Each work has an Author, and each page has the digital image.  The Chinese text of each document is also present in Unicode format for each artifact.
+
+\subsection{Seattle Meusium of Art History}, Or something I think.
+
+This webisite consists of an elaborate Flash-bastd website browser.  The images are zoomable to great resolution, and panable.  I do not know of a way to extract image data from inside the Adobe Flash application.  I believe Adobe purposefully makes it difficult to extract the underlying datastreams present in the flash app.
+Even so, I'm not sure the art had the text comes in anything other than image format.
+
+\subsection{CADAL Million book Project}
+
+CADAL is in China, it is run by the University of ????.  Cadal is a project funded by the Chinese government with the goal of preserving Chinese historical manuscripts in digital format.  Additionally the project seeks to make these documents available to the world, as to better share Chinese heritage and Culture.
+
+The researchers at CADAL have completed the tedious work of:
+1) Identifying the Bounding Box of every character in every page of selected documents (Is this complete?)
+2) Identified indifidual characters by thier unicode Chinese script.
+3) Additionally, Each character object also holds information about the Author, and the individual work, and page number of the work .
+
+
+
+
+
+
+
+
 Image Datasets are used extensively in both Research and Industry to push the frontiers of machine learning.  Searchable images also help e-commerce companies such as <newcite> find visually similar styles for customers.
 
 Today thousands of image datasets exist containing millions of individual photos available online to researchers and industry.  <newcite>.  These datasets typically consist of images and associated metadata(usually text) annotating the details of the picture in a structured way that computer can readily interpret.  An important purpose of these datasets is to permit is to reduce duplication of effort, as well improve reproducability of research.  While a great many datasets exist for scanned manuscripts.  Relatively few of these contain chinese calligraphy.
@@ -10,6 +64,8 @@ The places that you can find collections of chinese calligraphy documents online
 A great many datasets of written chinese text exist, but I found only two which contain Chinese calligraphy.  Of these two sets, I was only able to gain access to one, the CADAL Calligraphy database.  This Calligraphy contains importantly, images of works, combined with meta-information indicating the position of each character on the page, as along with other pertinant information.  This metadata is critical, because machines cannot readily interpret the calligraphy images.  Additionally, many of the texts are very old, and the language has changed enought that even native speakers may have trouble desciphering the script.
 
 The work I am doing aims to build upon previous work to the largest extent possible.  Many digital libraries provide access to digital calligraphy collections at no charge.  However the CADAL database was the only set I found which included physical location of individual characters on the page.
+
+   Many other images or collections of images exist in various libraries.  These image do not have the location information of each character readily available.
 
 Datasets:
 
@@ -50,6 +106,7 @@ Unfortunately, my access to this calligraphy database was mediated by the CADAL 
 I used a technique called web-scraping to make an indirect copy of the CADAL Character and Works database.  With this copy I am able to answer the above questions.  Additionally, since I now posses a copy the whole database, I can now make the database available in a form that other computer researchers can use directly.
 
 
+   I resorted to a technique called web-scraping.  web-scraping is when an automation technique used to reduce the magnitude of labor required to extract relevant information from a large number of similarly formatted HTML pages.
 
 
 

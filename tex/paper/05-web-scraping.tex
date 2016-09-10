@@ -34,6 +34,70 @@ The CADAL database has all the information I need.  But the website does not per
             
             CADAL did not offer it's data in any interchange format.  I was unsuccessful in my attempts to either get access to the Database, or a dump of my requires files.  I therefore had to resort to web-scraping.
             
+              I resorted to a technique called web-scraping.  web-scraping is when an automation technique used to reduce the magnitude of labor required to extract relevant information from a large number of similarly formatted HTML pages.
+    
+    Websites work by a query and response system, where the web browser sends a request for a specific page, and the web-server responds by sending the appropriate html page.  The page is then rendered and displayed to the user.  The user may then manually enter the viewed data into a database, or manually save the page etc.
+    
+    In web-scraping, a computer program called a scraper replaces the browser.  From the server perspective the scraper behaves similarly to a brower.   The server receives requests from the scraper, and server html pages in response.  My scraper fetches thousands of seperate HTML pages, and saves these pages to disk for later processing.
+    
+    1)  The Cadal Calligraphy website offers 3 distinct browsing modes for viewing the calligraphy collection:
+    (book mode)
+        In this mode users may browse a variety of books.  These books are written in Chinese Calligraphy.  The books themselves consist a collection of scanned images.  Each image represents a seperate page of the book.  The books are viewed through an interactive Adobe flash web application.
+        
+        The application gives the user a set of interactive buttons which allow the user to browse between pages, zoom-in/out etc.  
+        
+        Unfortunately, my account is a probationary account, where I am not permitted to view any pages past page 10 using the flash browser.
+        If you click the info button you get redirected to a page containing a chaper index of the book as well as relevant information about the book you may edit.
+
+    (worklist mode)
+        In this mode users may search and browse collections of different works.
+            A work is defined as one or more pages representing a single piece of work attributed to one calligrapher.
+            Frequently (but not usually) the works include a block of text in a window at the bottom.  If present, all pages of the translated work are printed at the bottom of the screen in a messagebox.
+            
+    (character mode)
+        In this mode users may browse, search for or view individual characters.  The characters are printed in a table, with up to 18 characters visible on the page at any given time.  The following search fields are searchable:
+            * character : 检索字(词)
+            * calligrapher :  书家
+            * dynasty :  朝代
+            * Chriography :  书体 , a dropdown menu consisting of 6 different styles, all: 所有 or (楷书) (行书) (篆书) (隶书) (草书) (其它)
+            
+            An additional drop-down menu reveals additional search options.
+            
+            * 偏旁笔画 : Radical strokes, a dropdown consisting of 1, 2, 3......15 strokes
+            *  偏旁 : Radical, a dropdown consisting of between 1 and 
+            
+            
+            These additional search options all have to do with different characteristics of a single character.  example
+
+
+    Both character images and page live on the CADAL server in the following structure:
+
+
+.
+└── CalliSources
+    ├── books
+    │   ├── 06100004
+    │   │   └── otiff
+    │   │       ├── 00000009.tiff
+    │   │       ├── 00000010.tiff
+    │   │       └── .....
+    │   ├── 06100005
+    │   └── .....
+    └── images
+        └── chatacterimage
+            ├── 06100004
+            │   ├── 00000009(266,179,402,296).jpg
+            │   ├── 00000010(206,251,358,346).jpg
+            │   └── .....
+            ├── 06100005
+            └── .....
+
+
+The CADAL Server in china delivers images at wildly inconsistant speeds.  Sometimes as slow at 20KB/s sometimes as fast at 2.5MB/s.  But usally above 50KB/s and below 500KB/s.  Slow bulk data transfer is a notorious problem when transfeing information in or out of China.  It took over 5 days to retrieve about 40Gb of images and store it on my Server.
+
+            
+            
+            
             The web scraping process is made up of the following steps and is generally considered more of an art than a Science.
                 1)  Experiment with the website.  Discover the pattern of requests that return pages carrying the information you need.
                 2)  Generate a list of requests based on step 1
