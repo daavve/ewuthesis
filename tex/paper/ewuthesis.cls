@@ -24,6 +24,16 @@
 \newtoks\committeesecond
 \newtoks\committeethird
 
+\newtoks\birthplace
+
+\newtoks\associatedegree
+\newtoks\associateyear
+\newtoks\associateschool
+\newtoks\bachelorsdegree
+\newtoks\bachelorsyear
+\newtoks\bachelorsschool
+
+
 \renewcommand{\maketitle}{      %TODO: Make the formatting better
     \begin{titlepage}
         \begin{center}
@@ -105,20 +115,22 @@
     
     \newpage
 }
+}
 
 \newcommand{\makevita}{         %TODO: Fix formatting, probably use tabular style to make things look better
     \begin{center}
         VITA
     \end{center}
     
-    
-    
-    \begin{itemize}
-        \item Author: \@author
-        \item Place of Birth: 
-        \item Degrees Awarded:
-        \item Professional Experience:
-    \end{itemize}
+    \bigskip
+    \begin{tabular}{ l l l}
+        Author: & \@author \\
+        Place of Birth: & \the\birthplace \\
+        Degrees Awarded: & \the\associatedegree & \the\associateyear \\
+                        & \the\associateschool \\
+                        & \the\bachelorsdegree & \the\bachelorsyear \\
+                        & \the\bachelorsschool
+    \end{tabular}
 
 
 }
