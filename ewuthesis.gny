@@ -20,13 +20,16 @@ indent_mode=2
 [project]
 name=ewuthesis
 base_path=/home/dave/ewuthesis
+description=
 
 [long line marker]
 long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=-1
+current_page=0
+FILE_NAME_0=0;LaTeX;0;EUTF-8;0;1;1;%2Fhome%2Fdave%2Fewuthesis%2Ftex%2Fpaper%2F05-web-scraping.tex;0;4
+FILE_NAME_1=496;LaTeX;0;EUTF-8;0;1;1;%2Fhome%2Fdave%2Fewuthesis%2Ftex%2Fpaper%2F06-overview-of-cadal-data.tex;0;4
 
 [VTE]
-last_dir=/home/dave/programs/kernel/linux
+last_dir=/home/dave/ewuthesis/tex/paper

@@ -1,1 +1,58 @@
 
+Calliset first required an image catalog, along with a corresponding database of character name, attributions, and positions in order to be effective.  In order to reduce the burden on my historian, I first searched the available research and image datasets.  This way I could aviod both unneccessary work and duplication of effort.
+
+Image Datasets are used extensively in both Research and Industry to push the frontiers of machine learning.  Searchable images also help e-commerce companies such as <newcite> find visually similar styles for customers.
+
+Today thousands of image datasets exist containing millions of individual photos available online to researchers and industry.  <newcite>.  These datasets typically consist of images and associated metadata(usually text) annotating the details of the picture in a structured way that computer can readily interpret.  An important purpose of these datasets is to permit is to reduce duplication of effort, as well improve reproducability of research.  While a great many datasets exist for scanned manuscripts.  Relatively few of these contain chinese calligraphy.
+
+The places that you can find collections of chinese calligraphy documents online:  Meuseum online collections such as the metropolitan meusium of art.  Bulk archiving sites such as archive.org.  The information from collections tends to be relatively unstructured and incomplete from a data processing standpoint.  This is the result of such online collections being optimized for interactive browsing and not bulk analysis.
+
+A great many datasets of written chinese text exist, but I found only two which contain Chinese calligraphy.  Of these two sets, I was only able to gain access to one, the CADAL Calligraphy database.  This Calligraphy contains importantly, images of works, combined with meta-information indicating the position of each character on the page, as along with other pertinant information.  This metadata is critical, because machines cannot readily interpret the calligraphy images.  Additionally, many of the texts are very old, and the language has changed enought that even native speakers may have trouble desciphering the script.
+
+The work I am doing aims to build upon previous work to the largest extent possible.  Many digital libraries provide access to digital calligraphy collections at no charge.  However the CADAL database was the only set I found which included physical location of individual characters on the page.
+
+Datasets:
+
+1)  The CADAL dataset is a database which contains works from:
+    920 seperate authors
+    4109 seperate works
+    20,026 seperate pages
+    110,652 seperate characters
+
+
+Unfortunately, my access to this calligraphy database was mediated by the CADAL website.  This website presented a rich variety of data about individual characters, such as location within parent work.  Like the Meusium collections mentioned earlier, the CADAL images and Database were very much curated by a web front-end.  CADAL provides no option export data into a computer-readable form.  My requests for one remain unanswered.
+
+    Why CADAL website does not meet the needs of my project:
+        1)  Work browsing interface does not allow for easy selection of an individual character from an existing work.
+        2)  The character search page is limited to only the first 18 results at any time.
+            *The character images themselves are generally low resolution, and highly artifact-ed, with some characters exhibiting this trait more profoundly than others.
+        3)  When the source page, with the bounding box is presented, overlay-ed in the source document, you get the following issues:
+            *  Source page is low resolution
+            *  The bounding box is quite thick and frequently obscures edges of the character
+            *  Displayed page is quite small, and the interface frustrates efforts to enlarge, or print them.
+        4)  High resolution images of pages exist on the CADAL server
+            * But only reduced resolution versions of these images are accessible when browsing the website.
+                + These available images suffer from the following quality issues:
+                    -Critical details are fuzzed, during down-sampling
+                    -Lossy JPEG compression further degrades image by smoothing textures, and introducing artifacts such as ringing
+        5)  The CADAL website exists in mainland China.  Any download of large files(Files larger than about 500Kb), are severely slowed by the Great firewall of china.
+            *Many of the image files were larger than 3Mb, which means they could take many minutes of waiting to download and view
+        
+        
+    It might have been possible to write a web gateway, which provides intermediate access to CADAL.  This could have overcome the image resolution problem, but could not easily solve the incomplete query problem.
+    
+    To summarize, I faced 3 problems when accessing the CADAL website directly:
+        *  Low quality images
+        *  Incomplete query results for characters
+        *  Bounding boxes which frequently obstructed portions of characters.
+                    
+
+I used a technique called web-scraping to make an indirect copy of the CADAL Character and Works database.  With this copy I am able to answer the above questions.  Additionally, since I now posses a copy the whole database, I can now make the database available in a form that other computer researchers can use directly.
+
+
+
+
+
+
+
+
