@@ -1,27 +1,10 @@
-    Why CADAL does not meet the needs of my project:
-        1)  Work browsing interface does not allow for easy selection of an individual character from an existing work.
-        2)  The character search page is limited to only the first 18 results at any time.
-            *The character images themselves are generally low resolution, and highly artifact-ed, with some characters exhibiting this trait more profoundly than others.
-        3)  When the source page, with the bounding box is presented, overlay-ed in the source document, you get the following issues:
-            *  Source page is low resolution
-            *  The bounding box is quite thick and frequently obscures edges of the character
-            *  Displayed page is quite small, and the interface frustrates efforts to enlarge, or print them.
-        4)  High resolution images of pages exist on the CADAL server
-            * But only reduced resolution versions of these images are accessible when browsing the website.
-                + These available images suffer from the following quality issues:
-                    -Critical details are fuzzed, during down-sampling
-                    -Lossy JPEG compression further degrades image by smoothing textures, and introducing artifacts such as ringing
-        5)  The CADAL website exists in mainland China.  Any download of large files(Files larger than about 500Kb), are severely slowed by the Great firewall of china.
-            *Many of the image files were larger than 3Mb, which means they could take many minutes of waiting to download and view
-        
-        
-    It might have been possible to write a web gateway, which provides intermediate access to CADAL.  This could have overcome the image resolution problem, but could not easily solve the incomplete query problem.
-    
+The CADAL database has all the information I need.  But the website does not permit me to access that information in a way that's immediately usefull to me.
+
     To summarize, I faced 3 problems when accessing the CADAL website directly:
         *  Low quality images
         *  Incomplete query results for characters
         *  Bounding boxes which frequently obstructed portions of characters.
-                    
+                   
 
 
 
@@ -39,9 +22,7 @@
                 Page of work
                 Parent document
             
-            The following was sometimes available:
-                Name of Work,
-                Transcript of work
+        3)    The following to place my documents inside a work.
                 
             The simplest and easiest way to acquire the above information is to get direct access to the information in CADAL, there are 3 ways this is typically done, in order of descending preference.
             *)  The user is given the contents of the database in an DIF(Data Interchange Format), this is usually, but not always JSON(JavaScript Object Notation), it can also be in CSV(Commas Separated Values), or a variety of other formats.
@@ -60,7 +41,9 @@
                 4)  Use a tool called an HTML parser to extract the required information from retrieved files.
                     *I stored the results of this step in a JSON file.
                 
-            I also needed to harvest the images.  Fortunately, the images lived in a part of the website that was static and enabled navigation throughout the folder structure.  I found the list files / folders we needed from the web scraping performed earlier.  It became a matter of bulk HTTP requesting the images in specific folders.
+            I also needed to harvest the images.  Fortunately, the images lived in a part of the website that serves static content and enabled navigation throughout it's folder structure.  I found the list files / folders we needed from the web scraping performed earlier.  It became a matter of bulk HTTP requesting the images in specific folders.
+            
+            Importantly, I discovered higher resolution images than are displayed via the website here!  Details..... Details
             
             In total the static part of the download consisted of just over 130K images, and totaled about 40Gb of data.  This bulk download took about 2 weeks due to the very high slowdown caused by the Great Firewall of China.
             
@@ -94,4 +77,10 @@
             -Quality of mapped characters is generally quite good except:
                 Bounding boxes frequently overlap
                 Bounding boxes frequently cut off portions of the character.                
-                
+    
+    
+    I have not acquired the following portions of the CADAL Database for my purposes:
+    
+    
+    
+    Now that I have the required information.  I can import that information into CaliSet.
