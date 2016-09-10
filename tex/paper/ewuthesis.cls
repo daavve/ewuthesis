@@ -19,6 +19,10 @@
 \newtoks\degree
 \newtoks\department
 
+\newtoks\committeefirst
+\newtoks\committeesecond
+\newtoks\committeethird
+
 \renewcommand{\maketitle}{      %TODO: Make the formatting better
     \begin{titlepage}
         \begin{center}
@@ -45,16 +49,26 @@
 
 \newcommand{\makesigline}[1]{
     \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
-    \par\noindent\makebox[2.5in][l]{#1, GRADUATE STUDY COMMITTE}      \hfill\makebox[2.0in][l]{Date}%
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{DATE}%
+    \\
+    {GRADUATE STUDY COMMITTE}
 }
 
 \newcommand{\makesigpage}{
+    \vspace*{\fill}
     \begin{center}
-        THESIS OF \@author\ APPROVED BY\\
+        THESIS OF \MakeUppercase{\@author}\ APPROVED BY\\
     \end{center}
-    \makesigline{....}\\
-    \makesigline{....}\\
-    \makesigline{....}
+    \vspace*{\fill}
+    
+
+    \makesigline{\the\committeefirst}\\
+    
+    \bigskip
+    \makesigline{\the\committeesecond}\\
+    
+    \bigskip
+    \makesigline{\the\committeethird}
     \newpage
 }
 
