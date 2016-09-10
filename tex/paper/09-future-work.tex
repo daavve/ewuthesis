@@ -1,5 +1,29 @@
 
-    My future work:
+JavaScript Object Notation, or JSON for short is an intermediate file format which is especially well suited for data interchange for the following reasons
+
+The data formatted in plain text, so it is easily read by either machines or humans.
+
+JSON data is formatted in a simple consistant and flexible way.  Here is an example of a single character formatted in JSON:
+
+\begin{verbatim}
+    
+{
+  "chi_author": "王羲之",
+  "chi_mark": "又",
+  "chi_work": "兰亭序",
+  "page_id": "00000053",
+  "work_id": "06100007",
+  "xy_coordinates": [
+  "102",
+  "613",
+  "164",
+  "662"
+  ]
+},
+\end{verbatim}
+
+
+My future work:
         
         *  Create an interface which enables website users to modify existing data on the site.
         *  Use a learning algorithm to "guess" the position of un-annotated characters.
@@ -7,5 +31,6 @@
         *  Use a comparison algorithm to "measure" and perhaps draw attention to important similarities / differences between characters.
         *The pages I downloaded were part of a larger collection of books released under public domain at archive.org.
         *The calligraphy images I downloaded were from select parts of the scanned books.  The scanned books have a lot of typed Chinese characters about the works.  Very likely these pages hold translations of the works, which a non-chinese speaker could use to add additional characters to the page database.
+        *Improve reproducability by creating Docker container, that way anyone can easly replicat my server.
 
     Some of this work has already been done by the folks at CADAL, maybe thayed like to share with me.
