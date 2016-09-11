@@ -1,6 +1,6 @@
 \chapter{web scraping}
 
-The CADAL database has all the information I need.  But the website does not permit me to access that information in a way that's immediately usefull to me.
+The CADAL database has all the information I need.  But the the underlying information can only be accessed indrectly.
 
     To summarize, I faced 3 problems when accessing the CADAL website directly:
         *  Low quality images
@@ -64,9 +64,11 @@ The CADAL database has all the information I need.  But the website does not per
     \end{figure}
     
     \begin{figure}{}
-    \parbox{12cm}{\includegraphics[width=12cm]{website-char-in-page.png}}
-    \caption{SWF app with bounding box around parent character}
-    \label{Viewing character bounding box from cadal}
+    \parbox{3cm}{\includegraphics[width=3cm,  vshift=-8cm]{website-char-select-zoomed.png}}
+    \qquad
+    \parbox{10cm}{\includegraphics[width=10cm]{website-char-in-page.png}}
+    \caption{selecting character brings up parent page}
+    \label{selecting character brings up parent page}
     \end{figure}
     
     \begin{figure}{}
@@ -75,7 +77,7 @@ The CADAL database has all the information I need.  But the website does not per
     \label{CADAL website interaction diagram}
     \end{figure}
     
-        \begin{figure}{}
+    \begin{figure}{}
     \parbox{12cm}{\includegraphics[width=12cm]{website-sequence-diagram.png}}
     \caption{sequence diagram: CADAL character transformation }
     \label{CADAL website sequence diagram}
