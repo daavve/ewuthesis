@@ -13,6 +13,10 @@
                                                     
 \RequirePackage{import}
 \RequirePackage[normalem]{ulem}
+\RequirePackage{setspace}
+
+\doublespacing
+
 \normalsfcodes
                                  
 \newtoks\degreeyear 
@@ -40,27 +44,21 @@
         \vspace*{\fill}         %Puts text in the middle of the page
             \MakeUppercase{\@title}\\
             
-            \bigskip
             \rule{\textwidth}{.4pt}
             
-            \bigskip
             A Thesis\\
             Presented To\\
             Eastern Washington University\\
             Cheney, Washington\\
             
-            \bigskip
             \rule{\textwidth}{.4pt}
             
-            \bigskip
             In Partial Fulfillment of the Requirements\\
             for the Degree\\
             \the\degree\ in \the\department\\
             
-            \bigskip
             \rule{\textwidth}{1pt}
             
-            \bigskip
             by\\
             \@author\\
             \the\degreeterm\ \the\degreeyear
@@ -87,10 +85,8 @@
 
     \makesigline{\the\committeefirst}\\
     
-    \bigskip
     \makesigline{\the\committeesecond}\\
     
-    \bigskip
     \makesigline{\the\committeethird}
     \newpage
 }
@@ -101,21 +97,19 @@
     \end{center}
     
     \bigskip
-    In presenting this thesis in partial fulfillment of the requirements for a master’s degree at Eastern Washington University, I agree that the JFK Library shall make copies freely available for inspection. I further agree that copying of this project in whole or in part is allowable only for scholarly purposes. \uline{It is understood, however, that any copying or publication of this thesis for commercial purposes, or for financial gain, shall not be allowed without my written permission.}
-    
-    \bigskip
+    In presenting this thesis in partial fulfillment of the requirements for a master’s degree at Eastern Washington University, I agree that the JFK Library shall make copies freely available for inspection. I further agree that copying of this project in whole or in part is allowable only for scholarly purposes. \uline{It is understood, however, that any copying or publication of this thesis for commercial purposes, or for financial gain, shall not be allowed without my written permission.}\\
+
     \bigskip
     \hfill\begin{minipage}{\dimexpr\textwidth-6cm}
     Signature \makebox[4cm]{\hrulefill}\\
     
-    \medskip
     Date \makebox[4.9cm]{\hrulefill}\\
     \end{minipage}
     
     
     \newpage
 }
-}
+
 
 \newcommand{\makevita}{         %TODO: Fix formatting, probably use tabular style to make things look better
     \begin{center}
