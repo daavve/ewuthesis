@@ -15,6 +15,8 @@
 \RequirePackage[normalem]{ulem}
 \RequirePackage{setspace}
 
+
+
 \doublespacing
 
 \normalsfcodes
@@ -112,9 +114,7 @@
 
 
 \newcommand{\makevita}{         %TODO: Fix formatting, probably use tabular style to make things look better
-    \begin{center}
-        VITA
-    \end{center}
+    \chapter{VITA}
     
     \bigskip
     \begin{tabular}{ l l l}

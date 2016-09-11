@@ -1,6 +1,8 @@
 \documentclass{ewuthesis}
 \usepackage{graphbox}
 
+
+
 \begin{document}
     \title{CaliSet: The Calligraphy Dataset}
     \author{David A. McInnis}    
@@ -25,18 +27,20 @@
     \frontmatter
     \maketitle          % formatting still pretty off
     \makesigpage        % does not include
-    \makelibrarystatement
-%    \subimport{}{00-abstract.tex}
-%    \subimport{}{01-acknowledgements.tex}
+    \makelibrarystatement{}
+    \subimport{}{00-abstract.tex}
+    \subimport{}{01-acknowledgements.tex}
     \mainmatter
-%    \subimport{}{02-introduction.tex}
-%    \subimport{}{03-background.tex}
-%    \subimport{}{04-existing-collections.tex}
-%    \subimport{}{05-web-scraping.tex}
-%    \subimport{}{06-overview-of-cadal-data}
-%    \subimport{}{07-website-construction.tex}
-%    \subimport{}{08-website-evaluation.tex}
-%    \subimport{}{09-future-work.tex}
+    \tableofcontents
+    \listoftables
+    \subimport{}{02-introduction.tex}
+    \subimport{}{03-background.tex}
+    \subimport{}{04-existing-collections.tex}
+    \subimport{}{05-web-scraping.tex}
+    \subimport{}{06-overview-of-cadal-data}
+    \subimport{}{07-website-construction.tex}
+    \subimport{}{08-website-evaluation.tex}
+    \subimport{}{09-future-work.tex}
 
 % \bibliographystyle{acm}
 
@@ -44,8 +48,11 @@
 
 % \bibliography{cadal}
 
+
+    \backmatter
+   
+
     
-%    \newpage
     \makevita
     
     
