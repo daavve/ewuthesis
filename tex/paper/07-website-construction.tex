@@ -33,6 +33,13 @@ As mentioned earlier, I chose to build my Character Comparison Tool as a website
                 
                 This allows another researcher to (hopefully) easily and (also hopefully) comprehensively compare a large number of similar, but different characters, in order to discern the subtle differences between and among Calligraphic works
                 
+                An image browser using an adaptive scroll bar was something I could not find, so I had to make it.  My origional work based on JRAC, the Jquery Resize And Crop tool.  My improvements constitute the fixed point zoom feature, where the zoom maintains the center of focus on the center of the viewing window.  I accomplished this by having JQuery adjust the location of the image during resize events.  Also, jquery re-calculates the locaiton of every bounding box during both zoom and drag operations.
+                
+                There are several significant shortcomings in my method though.
+                1)  The whole high resolution image is downloaded during page viewing. This causes a significant time period to elapse during page render.
+                2)  The bounding boxes are fairly heavyweight javascript objects, My impleentation works well for dozens, but could not sustain thousands.
+                3)  The positions of every bounding box are re-calculated and the box positions are updated during zoom and pan operations regardless of zoom level.  At high zoom levels the processor spends significant time on objects that are not visible.
+                
                 
                     My results:
         *  I created a website that permits browsing uploaded images of calligraphy texts.

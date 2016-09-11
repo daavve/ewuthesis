@@ -72,12 +72,12 @@
 
 \newcommand{\makesigline}[1]{
     \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
-    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{DATE}%
-    \\
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{DATE}
     {GRADUATE STUDY COMMITTE}
 }
 
 \newcommand{\makesigpage}{
+    \singlespacing
     \vspace*{\fill}
     \begin{center}
         THESIS OF \MakeUppercase{\@author}\ APPROVED BY\\
@@ -91,6 +91,7 @@
     
     \makesigline{\the\committeethird}
     \newpage
+    \doublespacing
 }
 
 \newcommand{\makelibrarystatement}{
