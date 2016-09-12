@@ -1,14 +1,15 @@
 \chapter{Website Construction}
 
     <Note, I am directly copying from the first chapert here>
-    (1)  The researchers in China put prodigous effort into producing the Calligraphy Data Set Scientific community.  While CADAL has made efforts to ensure the durability of it's scanned images through partnership with archive.org.  To the best of my knowled the character database currently lacks such redundancy.
+    (1)  The researchers in China put prodigous effort into producing the Calligraphy Data Set Scientific community.  While CADAL has made efforts to ensure the durability of it's scanned images through partnership with archive.org.  To the best of my knowled the character database currently lacks an additional copy in North America.
     
     Also mentioned earlier, CADAL has fairly comprehensive character searching interface.  The primary focus of my work is to provide capabilities not well met by the CADAL site.  I aim for the following:
     1)  Provide my data in a format easily downloadable and usable by Scientific Researchers and historians
     2)  Provide a web-interface where the public can browse current works
     3)  Also provide the ability to closely compare two or more characters against each other.
+    4)  Present the data in a way that archive.org can make a historical record of my site.
     
-    I chose JSON data the format with which to share my research:
+    
     
     
     
@@ -21,12 +22,17 @@
     \label{Vietnam Memorial inspiration}
     \end{figure}
     
-    My website needed to have to ability to browse between works, 
+    Insipration for my site design was provided by the vietnam memorial application at fold3.com.  
     
         My Website overview:
             My website is fairly typical and includes the following:
-                Front-End:  jQuery based user-interface
-                Back-End:   Django, Gunicorn, and Nginx with a PostgreSQL database
+                Front-End:  Javascript Library: jQuery \& jQueryUI
+                
+                Back-End:   Operating system:   Arch Linux
+                            Web Framework:      Django
+                            Web Server:         Gunicorn
+                            Web Proxy:          Nginx
+                            Database:           PostgreSQL
                 
             When the user is browsing an individual page he / she sees a calligraphy page, inside a re-sizable window.
                 Green boxes are overlay-ed on top of all characters in this page that map to the Character Database.
@@ -34,7 +40,7 @@
                 The page is naturally navigable with a zoom in/out bar and drag-able window.
                 Every-time the page is dragged or the zoom level is changed, all character boxes are adjusted so they stay precisely the same position and size with respect to the parent page.
                 
-                As the user mouses over a character, it's box turns blue indicating it is a candidate for selection.
+                As the user mouses over a character, it's box turns blue indicating that character is a candidate for selection.
                 
                 Once a character is selected a slider, it's box turns red. A slider at the bottom of the screen becomes populated with characters which are attributed to that same author
                 
@@ -55,6 +61,6 @@
             +Bounding boxes are overlay-ed on top of characters on the 
                 *These bounding boxes follow characters during navigation (Zoom and drag)
                 *Zooming is continuous, not discrete, this way researchers can see the two characters side-by-side for a more effective comparison
-            +To the best of my knowledge, this is the first application to allow easy and direct navigation between similar characters on scanned high resolution, continuously zoom-able images.
+            +To the best of my knowledge, this is the first web application to allow easy and direct navigation between similar characters on scanned high resolution, continuously zoom-able images.
             
 
