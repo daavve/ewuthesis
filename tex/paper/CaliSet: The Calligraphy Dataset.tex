@@ -1,8 +1,15 @@
 \documentclass{ewuthesis}
+\usepackage{hyperref}
+\hypersetup{pdftitle={CaliSet: The Calligraphy Dataset}}
 \usepackage{morefloats}
 \usepackage{graphbox}
 \graphicspath{ {images/} }
+\usepackage[toc, xindy]{glossaries}
 
+\newglossaryentry{cadal}{name={cadal},description={China Academic Digital Associate Library}}
+% \newacronym{cadal}{cadal}{CADALChina Academic Digital Associate Library}
+
+\makeglossaries
 
 \begin{document}
     \title{CaliSet: The Calligraphy Dataset}
@@ -33,7 +40,7 @@
     \subimport{}{01-acknowledgements.tex}
     \mainmatter
     \tableofcontents
-    \listoffigures
+    \listoffigures{}
     \subimport{}{02-introduction.tex}
     \subimport{}{03-background.tex}
     \subimport{}{04-existing-collections.tex}
@@ -42,6 +49,8 @@
     \subimport{}{07-website-construction.tex}
     \subimport{}{08-website-evaluation.tex}
     \subimport{}{09-future-work.tex}
+    here is \gls{cadal}
+    \chapter{glossary}
 
 % \bibliographystyle{acm}
 
