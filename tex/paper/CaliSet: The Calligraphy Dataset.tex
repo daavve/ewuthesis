@@ -4,12 +4,12 @@
 \usepackage{morefloats}
 \usepackage{graphbox}
 \graphicspath{ {images/} }
-\usepackage[toc, xindy]{glossaries}
-
-\newglossaryentry{cadal}{name={cadal},description={China Academic Digital Associate Library}}
-% \newacronym{cadal}{cadal}{CADALChina Academic Digital Associate Library}
-
-\makeglossaries
+                                %\usepackage[toc, xindy]{glossaries}
+                                % \newglossaryentry{cadal}{name={cadal},description={China Academic Digital Associate Library}}
+                                % \newacronym{cadal}{cadal}{CADALChina Academic Digital Associate Library}
+                                % \makeglossaries{}
+                                
+\usepackage[notindex]{tocbibind}
 
 \begin{document}
     \title{CaliSet: The Calligraphy Dataset}
@@ -49,18 +49,18 @@
     \subimport{}{07-website-construction.tex}
     \subimport{}{08-website-evaluation.tex}
     \subimport{}{09-future-work.tex}
-    here is \gls{cadal}
-    \chapter{glossary}
+%    \chapter{glossary}
 
-% \bibliographystyle{acm}
+
 
 % wazzup\cite{Gao:2012:CDC:2232817.2232889} fellas
 
 % \bibliography{cadal}
 
 
-    \backmatter
-   
+    \backmatter{}
+    \bibliographystyle{acm}
+    \bibliography{cadal}
 
     
     \makevita
