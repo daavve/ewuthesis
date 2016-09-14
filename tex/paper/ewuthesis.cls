@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ewuthesis}[2016/04/28 Eastern Washington University Thesis]
+\ProvidesClass{ewuthesis}[2016/09/13 Eastern Washington University Thesis]
 
 \LoadClass[letterpaper, oneside, 12pt]{book}        % My class is built upon the book class
                                                     % EWU Thesis documents are always one-sided
@@ -14,7 +14,10 @@
 \RequirePackage{import}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{setspace}
+\RequirePackage{hyperref}
 
+\RequirePackage{morefloats}
+\RequirePackage[notindex]{tocbibind}
 
 
 \doublespacing
@@ -38,6 +41,8 @@
 \newtoks\bachelorsdegree
 \newtoks\bachelorsyear
 \newtoks\bachelorsschool
+
+\hypersetup{pdftitle=\@title}
 
 
 \renewcommand{\maketitle}{      %TODO: Make the formatting better
