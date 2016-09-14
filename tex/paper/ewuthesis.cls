@@ -7,23 +7,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ewuthesis}[2016/09/13 Eastern Washington University Thesis]
 
-\LoadClass[letterpaper, oneside, 12pt]{book}        % My class is built upon the book class
-                                                    % EWU Thesis documents are always one-sided
-                                                    
-                                                    
+\LoadClass[letterpaper, oneside, 12pt]{book}
 \RequirePackage{import}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{setspace}
 \RequirePackage{hyperref}
-
 \RequirePackage{morefloats}
 \RequirePackage[notindex]{tocbibind}
 
-
 \doublespacing
-
 \normalsfcodes
-                                 
+
+
 \newtoks\degreeyear 
 \newtoks\degreeterm
 \newtoks\degree
@@ -41,6 +36,7 @@
 \newtoks\bachelorsdegree
 \newtoks\bachelorsyear
 \newtoks\bachelorsschool
+
 
 \hypersetup{pdftitle=\@title}
 
@@ -118,7 +114,6 @@
     \newpage
 }
 
-
 \newcommand{\makevita}{         %TODO: Fix formatting, probably use tabular style to make things look better
     \chapter{VITA}
     
@@ -131,7 +126,5 @@
                         & \the\bachelorsdegree & \the\bachelorsyear \\
                         & \the\bachelorsschool
     \end{tabular}
-
-
 }
 
