@@ -120,9 +120,12 @@
     \bigskip
     \begin{tabular}{ l l l}
         Author: & \@author \\
+        \\
         Place of Birth: & \the\birthplace \\
+        \\
         Degrees Awarded: & \the\associatedegree & \the\associateyear \\
                         & \the\associateschool \\
+                        \\
                         & \the\bachelorsdegree & \the\bachelorsyear \\
                         & \the\bachelorsschool
     \end{tabular}
