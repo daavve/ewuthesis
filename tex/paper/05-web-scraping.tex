@@ -4,7 +4,7 @@ The CADAL database has all the information I need.  But the the underlying infor
 
     To summarize, I faced 3 problems when accessing the CADAL website directly:
         *  Low quality images
-        *  Incomplete query results for characters
+        *  inability to query characters based on page
         *  Bounding boxes which frequently obstructed portions of characters.
                    
 
@@ -181,3 +181,21 @@ The CADAL Server in china delivers images at wildly inconsistant speeds.  Someti
     
     
     Now that I have the required information.  I can import that information into CaliSet.
+    
+    Here is some info about the workslist page:
+    
+    Each page has 15 items when fully populated.
+    You can browse by page, and the last page:  page 245 has 9 items
+    That means pages 1-244 have 15 items,
+    
+    15 * 244 + 9 = 3,669, works,
+    However, I was able to download 4,109 works by querying the server directly by ID number.
+    This means that 4,109 - 3,669 = 440 works are not directly available from the main intex, and may not be accessable at all without typing the work number into the browser bar.
+    
+    Of there 440 unindexed works, 344 have an author name of the database value: null
+    
+    I did not investigate further why the remaining 96 are not present in the index.
+    
+    
+    
+    
