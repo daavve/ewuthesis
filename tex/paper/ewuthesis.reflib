@@ -685,5 +685,22 @@
 			<bib_extra key="Month">jan</bib_extra>
 			<bib_extra key="Publisher">Elsevier BV</bib_extra>
 		</doc>
+		<doc>
+			<relative_filename>../../other research/Digital Libraries/dataset of paintings (could not get).pdf</relative_filename>
+			<key>Bao_2010</key>
+			<notes></notes>
+			<tagged>0</tagged>
+			<bib_type>conference</bib_type>
+			<bib_doi>10.7763/IPCSIT.2012.V42.20</bib_doi>
+			<bib_title>A Dataset for Research of Traditional Chinese Painting and Calligraphy Images</bib_title>
+			<bib_authors>Hong Bao1 and Ye Liang and Hong-zhe Liu and De Xu</bib_authors>
+			<bib_journal></bib_journal>
+			<bib_volume></bib_volume>
+			<bib_number></bib_number>
+			<bib_pages></bib_pages>
+			<bib_year>2012</bib_year>
+			<bib_extra key="address">Singaport</bib_extra>
+			<bib_extra key="howpublished">International Conference on Information and Multimedia Technology</bib_extra>
+		</doc>
 	</doclist>
 </library>
