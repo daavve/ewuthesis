@@ -2,13 +2,18 @@
 <library>
 	<manage_target braces="false" utf8="false"></manage_target>
 	<library_folder monitor="false"></library_folder>
-	<taglist/>
+	<taglist>
+		<tag>
+			<uid>0</uid>
+			<name>cited</name>
+		</tag>
+	</taglist>
 	<doclist>
 		<doc>
-			<filename></filename>
-			<key>Amershi:2011</key>
+			<relative_filename>../../other research/Future-work/effective end user interaction with machine learning.pdf</relative_filename>
+			<key>Amershi_2011</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
+			<bib_type>inproceedings</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Effective End-User Interaction with Machine Learning</bib_title>
 			<bib_authors>Amershi, Saleema and Fogarty, James and Kapoor, Ashish and Tan, Desney S.</bib_authors>
@@ -19,38 +24,18 @@
 			<bib_year>2011</bib_year>
 			<bib_extra key="Bibsource">dblp computer science bibliography, http://dblp.org</bib_extra>
 			<bib_extra key="Biburl">http://dblp.uni-trier.de/rec/bib/conf/aaai/2011</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the Twenty-Fifth AAAI Conference on Artificial Intelligence, AAAI 2011, San Francisco, California, USA, August 7-11, 2011</bib_extra>
-			<bib_extra key="Editor">Burgard, Wolfram and Roth, Dan</bib_extra>
-			<bib_extra key="Publisher">AAAI Press</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the Twenty-Fifth AAAI Conference on Artificial Intelligence, AAAI 2011, San Francisco, California, USA, August 7-11, 2011</bib_extra>
+			<bib_extra key="editor">Burgard, Wolfram and Roth, Dan</bib_extra>
+			<bib_extra key="publisher">AAAI Press</bib_extra>
 			<bib_extra key="Timestamp">Tue, 09 Aug 2011 07:56:46 +0200</bib_extra>
 			<bib_extra key="Url">http://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3736</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Burgard:2011</key>
+			<relative_filename>../../other research/Future-work/seal detection.pdf</relative_filename>
+			<key>Bao_2009</key>
 			<notes></notes>
-			<bib_type>Proceedings</bib_type>
-			<bib_doi></bib_doi>
-			<bib_title>Proceedings of the Twenty-Fifth AAAI Conference on Artificial Intelligence, AAAI 2011, San Francisco, California, USA, August 7-11, 2011</bib_title>
-			<bib_authors></bib_authors>
-			<bib_journal></bib_journal>
-			<bib_volume></bib_volume>
-			<bib_number></bib_number>
-			<bib_pages></bib_pages>
-			<bib_year>2011</bib_year>
-			<bib_extra key="Bibsource">dblp computer science bibliography, http://dblp.org</bib_extra>
-			<bib_extra key="Biburl">http://dblp.uni-trier.de/rec/bib/conf/aaai/2011</bib_extra>
-			<bib_extra key="Editor">Burgard, Wolfram and Roth, Dan</bib_extra>
-			<bib_extra key="Publisher">AAAI Press</bib_extra>
-			<bib_extra key="Series"></bib_extra>
-			<bib_extra key="Timestamp">Tue, 09 Aug 2011 07:56:46 +0200</bib_extra>
-		</doc>
-		<doc>
-			<filename></filename>
-			<key>Bao:2009</key>
-			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/WCSP.2009.5371700</bib_doi>
 			<bib_title>An effective method to detect seal images from traditional Chinese paintings</bib_title>
 			<bib_authors>Bao, H. and Xu, D. and Feng, S.</bib_authors>
 			<bib_journal></bib_journal>
@@ -58,17 +43,16 @@
 			<bib_number></bib_number>
 			<bib_pages>1-4</bib_pages>
 			<bib_year>2009</bib_year>
-			<bib_extra key="BookTitle">Wireless Communications Signal Processing, 2009. WCSP 2009. International Conference on</bib_extra>
-			<bib_extra key="Doi">10.1109/WCSP.2009.5371700</bib_extra>
+			<bib_extra key="booktitle">Wireless Communications Signal Processing, 2009. WCSP 2009. International Conference on</bib_extra>
 			<bib_extra key="Keywords">art;feature extraction;image recognition;Chinese paintings;seal image;seal information;semantic information;semantic meaning;Autocorrelation;Brushes;Digital images;Feature extraction;Image retrieval;Information technology;Ink;Internet;Painting;Seals;Color model;Seal image extraction;Template matching;Traditional Chinese paintings;structure features</bib_extra>
 			<bib_extra key="Month">Nov</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Liang:2010</key>
+			<relative_filename>../../other research/Future-work/simple classification.pdf</relative_filename>
+			<key>Liang_2010</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/ICEIT.2010.5608356</bib_doi>
 			<bib_title>A simple method for classification of traditional Chinese Painting and Calligraphy images</bib_title>
 			<bib_authors>Liang, Ye and Bao, Hong and Liu, Hong-Zhe</bib_authors>
 			<bib_journal></bib_journal>
@@ -76,17 +60,16 @@
 			<bib_number></bib_number>
 			<bib_pages>-3</bib_pages>
 			<bib_year>2010</bib_year>
-			<bib_extra key="BookTitle">Educational and Information Technology (ICEIT), 2010 International Conference on</bib_extra>
-			<bib_extra key="Doi">10.1109/ICEIT.2010.5608356</bib_extra>
+			<bib_extra key="booktitle">Educational and Information Technology (ICEIT), 2010 International Conference on</bib_extra>
 			<bib_extra key="Keywords">image classification;image processing;painting;Chinese character;Chinese painting;calligraphy;image composition;image processing technique;Brushes;Chinese Calligraphy images;feature extraction;image classification;traditional Chinese Painting images</bib_extra>
 			<bib_extra key="Month">Sept</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Hongzhe:2012</key>
+			<relative_filename>../../other research/Future-work/quantifying through semantics.pdf</relative_filename>
+			<key>Hongzhe_2012</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/ICCSNT.2012.6525881</bib_doi>
 			<bib_title>Research on quantifying color of HSV in extraction of middle-level semantic objects of traditional Chinese painting images</bib_title>
 			<bib_authors>Hongzhe, L. and Ye, L. and Guangmei, X.</bib_authors>
 			<bib_journal></bib_journal>
@@ -94,17 +77,16 @@
 			<bib_number></bib_number>
 			<bib_pages>15-19</bib_pages>
 			<bib_year>2012</bib_year>
-			<bib_extra key="BookTitle">Computer Science and Network Technology (ICCSNT), 2012 2nd International Conference on</bib_extra>
-			<bib_extra key="Doi">10.1109/ICCSNT.2012.6525881</bib_extra>
+			<bib_extra key="booktitle">Computer Science and Network Technology (ICCSNT), 2012 2nd International Conference on</bib_extra>
 			<bib_extra key="Keywords">art;feature extraction;image colour analysis;HSV;color quantification;middle-level semantic object extraction;scripts part;seals part;traditional Chinese painting image;color space;feature extraction;the scripts part;the seals part;traditional Chinese painting images</bib_extra>
 			<bib_extra key="Month">Dec</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Nagy:2011</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/CalliGUI, interactive character labeling.pdf</relative_filename>
+			<key>Nagy_2011</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/ICDAR.2011.198</bib_doi>
 			<bib_title>CalliGUI: Interactive Labeling of Calligraphic Character Images</bib_title>
 			<bib_authors>Nagy, G. and Zhang, X.</bib_authors>
 			<bib_journal></bib_journal>
@@ -112,18 +94,17 @@
 			<bib_number></bib_number>
 			<bib_pages>977-981</bib_pages>
 			<bib_year>2011</bib_year>
-			<bib_extra key="BookTitle">2011 International Conference on Document Analysis and Recognition</bib_extra>
-			<bib_extra key="Doi">10.1109/ICDAR.2011.198</bib_extra>
+			<bib_extra key="booktitle">2011 International Conference on Document Analysis and Recognition</bib_extra>
 			<bib_extra key="Issn">1520-5363</bib_extra>
 			<bib_extra key="Keywords">document image processing;graphical user interfaces;humanities;pattern classification;CalliGUI;Pinyin keyboard entry;calligraphic data entry;feature based character classifier;interactive calligraphic character image labeling;top-N classifier accuracy;Accuracy;Books;Character recognition;Databases;Image segmentation;Labeling;Training;calligraphy;computer-aided labeling;shape-based recognition;top-N classification</bib_extra>
 			<bib_extra key="Month">Sept</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Bozkurt:2015</key>
+			<relative_filename>../../other research/Future-work/classifying styles using complex wavelet transform.pdf</relative_filename>
+			<key>Bozkurt_2015</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1007/s11760-015-0795-z</bib_doi>
 			<bib_title>Classifying fonts and calligraphy styles using complex wavelet transform</bib_title>
 			<bib_authors>Bozkurt, Alican and Duygulu, Pinar and Cetin, A.  Enis</bib_authors>
 			<bib_journal>Signal, Image and Video Processing</bib_journal>
@@ -132,15 +113,14 @@
 			<bib_pages>225-234</bib_pages>
 			<bib_year>2015</bib_year>
 			<bib_extra key="Abstract">Recognizing fonts has become an important task in document analysis, due to the increasing number of available digital documents in different fonts and emphases. A generic font recognition system independent of language, script and content is desirable for processing various types of documents. At the same time, categorizing calligraphy styles in handwritten manuscripts is important for paleographic analysis, but has not been studied sufficiently in the literature. We address the font recognition problem as analysis and categorization of textures. We extract features using complex wavelet transform and use support vector machines for classification. Extensive experimental evaluations on different datasets in four languages and comparisons with state-of-the-art studies show that our proposed method achieves higher recognition accuracy while being computationally simpler. Furthermore, on a new dataset generated from Ottoman manuscripts, we show that the proposed method can also be used for categorizing Ottoman calligraphy with high accuracy.</bib_extra>
-			<bib_extra key="Doi">10.1007/s11760-015-0795-z</bib_extra>
 			<bib_extra key="Issn">1863-1711</bib_extra>
 			<bib_extra key="Url">http://dx.doi.org/10.1007/s11760-015-0795-z</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Yang:2015</key>
+			<relative_filename>../../other research/Future-work/Similar Character Weakly Supervised Learning.pdf</relative_filename>
+			<key>Yang_2015</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
+			<bib_type>article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Similar Handwritten Chinese Character Discrimination by Weakly Supervised Learning</bib_title>
 			<bib_authors>Yang, Zhibo and Xu, Huanle and Fu, Keda and Xia, Yong</bib_authors>
@@ -155,11 +135,11 @@
 			<bib_extra key="Url">http://arxiv.org/abs/1509.05844</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Cheng:2005</key>
+			<relative_filename>../../other research/Future-work/segmenting cursive using neural nets.pdf</relative_filename>
+			<key>Cheng_2005</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/ICDAR.2005.237</bib_doi>
 			<bib_title>The neural-based segmentation of cursive words using enhanced heuristics</bib_title>
 			<bib_authors>Cheng, Chun Ki and Blumenstein, M.</bib_authors>
 			<bib_journal></bib_journal>
@@ -167,18 +147,17 @@
 			<bib_number></bib_number>
 			<bib_pages>650-654</bib_pages>
 			<bib_year>2005</bib_year>
-			<bib_extra key="BookTitle">Eighth International Conference on Document Analysis and Recognition (ICDAR’05)</bib_extra>
-			<bib_extra key="Doi">10.1109/ICDAR.2005.237</bib_extra>
+			<bib_extra key="booktitle">Eighth International Conference on Document Analysis and Recognition (ICDAR’05)</bib_extra>
 			<bib_extra key="Issn">1520-5363</bib_extra>
 			<bib_extra key="Keywords">character recognition;image segmentation;neural nets;enhanced heuristic segmenter;feature extraction;ligature detection;neural assistant;neural-based segmentation;segmentation point validation;Australia;Benchmark testing;Character recognition;Communications technology;Computer vision;Feature extraction;Gold;Handwriting recognition;Postal services;Spatial databases</bib_extra>
 			<bib_extra key="Month">Aug</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Brown:1992</key>
+			<relative_filename>../../other research/Future-work/ACM Survey of Image Registration Techniques.pdf</relative_filename>
+			<key>Brown_1992</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1145/146370.146374</bib_doi>
 			<bib_title>A Survey of Image Registration Techniques</bib_title>
 			<bib_authors>Brown, Lisa Gottesfeld</bib_authors>
 			<bib_journal>ACM Comput. Surv.</bib_journal>
@@ -188,7 +167,6 @@
 			<bib_year>1992</bib_year>
 			<bib_extra key="Acmid">146374</bib_extra>
 			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="Doi">10.1145/146370.146374</bib_extra>
 			<bib_extra key="Issn">0360-0300</bib_extra>
 			<bib_extra key="Issue_date">Dec. 1992</bib_extra>
 			<bib_extra key="Keywords">image registration, image warping, rectification, template matching</bib_extra>
@@ -198,11 +176,11 @@
 			<bib_extra key="Url">http://doi.acm.org/10.1145/146370.146374</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Gao:2012:1</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/CADAL Digital calligraphy system (brief).pdf</relative_filename>
+			<key>Gao_2012</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1145/2232817.2232889</bib_doi>
 			<bib_title>CADAL digital calligraphy system</bib_title>
 			<bib_authors>Gao, Pengcheng and Wu, Jiangqin and Xia, Yang and Lin, Yuan</bib_authors>
 			<bib_journal>Proceedings of the 12th ACM/IEEE-CS joint conference on Digital Libraries - JCDL ’12</bib_journal>
@@ -210,49 +188,29 @@
 			<bib_number></bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2012</bib_year>
-			<bib_extra key="Doi">10.1145/2232817.2232889</bib_extra>
 			<bib_extra key="Isbn">http://id.crossref.org/isbn/9781450311540</bib_extra>
 			<bib_extra key="Publisher">Association for Computing Machinery (ACM)</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Bukhari:2012</key>
+			<relative_filename>../../other research/phd thesis/Generic methods for document understanding.pdf</relative_filename>
+			<key>Bukhari_2012</key>
 			<notes></notes>
-			<bib_type>PhdThesis</bib_type>
+			<bib_type>phdthesis</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Generic Methods for Document Layout Analysis and Preprocessing</bib_title>
 			<bib_authors>Bukhari, Syed Saqib</bib_authors>
 			<bib_journal></bib_journal>
 			<bib_volume></bib_volume>
 			<bib_number></bib_number>
-			<bib_pages></bib_pages>
+			<bib_pages>219</bib_pages>
 			<bib_year>2012</bib_year>
-			<bib_extra key="Pages">219</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhuang:2005</key>
+			<relative_filename>../../other research/probably can't use/p263-ye.pdf</relative_filename>
+			<key>Ye_2010</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
-			<bib_title>Digital libraries: A testbed for multimedia technology</bib_title>
-			<bib_authors>Zhuang, Yue-ting</bib_authors>
-			<bib_journal>J. Zhejiang Univ. Sci.</bib_journal>
-			<bib_volume>6A</bib_volume>
-			<bib_number>11</bib_number>
-			<bib_pages>1201-1203</bib_pages>
-			<bib_year>2005</bib_year>
-			<bib_extra key="Doi">10.1631/jzus.2005.a1201</bib_extra>
-			<bib_extra key="Issn">1009-3095</bib_extra>
-			<bib_extra key="Month">nov</bib_extra>
-			<bib_extra key="Publisher">Zhejiang University Press</bib_extra>
-		</doc>
-		<doc>
-			<filename></filename>
-			<key>Ye:2010</key>
-			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/1816123.1816164</bib_doi>
 			<bib_title>In-depth Utilization of Chinese Ancient Maps: A Hybrid Approach to Digitizing Map Resources in CADAL</bib_title>
 			<bib_authors>Ye, Zhenchao and Zhuang, Ling and Wu, Jiangqin and Du, Chenyang and Wei, Baogang and Zhang, Yin</bib_authors>
 			<bib_journal></bib_journal>
@@ -261,48 +219,22 @@
 			<bib_pages>263-272</bib_pages>
 			<bib_year>2010</bib_year>
 			<bib_extra key="Acmid">1816164</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 10th Annual Joint Conference on Digital Libraries</bib_extra>
-			<bib_extra key="Doi">10.1145/1816123.1816164</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 10th Annual Joint Conference on Digital Libraries</bib_extra>
 			<bib_extra key="Isbn">978-1-4503-0085-8</bib_extra>
 			<bib_extra key="Keywords">atlases, digital library, image processing, kernel method</bib_extra>
 			<bib_extra key="Location">Gold Coast, Queensland, Australia</bib_extra>
 			<bib_extra key="Numpages">10</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">JCDL ’10</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">JCDL ’10</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/1816123.1816164</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhu:2009</key>
+			<relative_filename>../../other research/chinese-painting/Inscription extraction.pdf</relative_filename>
+			<key>Pan_2013</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
-			<bib_title>Content Integration in Digital Libraries</bib_title>
-			<bib_authors>Zhu, Wenhao and Wei, Baogang and Zhuang, Yueting and Shi, Shaomin and Yang, Yan</bib_authors>
-			<bib_journal></bib_journal>
-			<bib_volume></bib_volume>
-			<bib_number></bib_number>
-			<bib_pages>57-64</bib_pages>
-			<bib_year>2009</bib_year>
-			<bib_extra key="Acmid">1631019</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 2009 Workshop on Ambient Media Computing</bib_extra>
-			<bib_extra key="Doi">10.1145/1631005.1631019</bib_extra>
-			<bib_extra key="Isbn">978-1-60558-760-8</bib_extra>
-			<bib_extra key="Keywords">digital libraries, digitized textbook, information extraction</bib_extra>
-			<bib_extra key="Location">Beijing, China</bib_extra>
-			<bib_extra key="Numpages">8</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">AMC ’09</bib_extra>
-			<bib_extra key="Url">http://doi.acm.org/10.1145/1631005.1631019</bib_extra>
-		</doc>
-		<doc>
-			<filename></filename>
-			<key>Pan:2013</key>
-			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/2499788.2499817</bib_doi>
 			<bib_title>Inscription Extraction from Traditional Chinese Painting Images</bib_title>
 			<bib_authors>Pan, Wei-guo and Lu, Ke and Zhai, Rui</bib_authors>
 			<bib_journal></bib_journal>
@@ -311,60 +243,37 @@
 			<bib_pages>349-352</bib_pages>
 			<bib_year>2013</bib_year>
 			<bib_extra key="Acmid">2499817</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the Fifth International Conference on Internet Multimedia Computing and Service</bib_extra>
-			<bib_extra key="Doi">10.1145/2499788.2499817</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the Fifth International Conference on Internet Multimedia Computing and Service</bib_extra>
 			<bib_extra key="Isbn">978-1-4503-2252-2</bib_extra>
 			<bib_extra key="Keywords">Traditional Chinese Painting, corner feature, extraction, inscription</bib_extra>
 			<bib_extra key="Location">Huangshan, China</bib_extra>
 			<bib_extra key="Numpages">4</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">ICIMCS ’13</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">ICIMCS ’13</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/2499788.2499817</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhang:2007:1</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/style comparisons in calligraphy.pdf</relative_filename>
+			<key>Zhang_2007_1</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1117/12.908872</bib_doi>
 			<bib_title>Style comparisons in calligraphy</bib_title>
 			<bib_authors>Zhang, Xiafen and Nagy, George</bib_authors>
-			<bib_journal></bib_journal>
+			<bib_journal>Proc. SPIE</bib_journal>
 			<bib_volume>8297</bib_volume>
 			<bib_number></bib_number>
 			<bib_pages>82970-82970</bib_pages>
 			<bib_year>2012</bib_year>
-			<bib_extra key="Abstract">Calligraphic style is considered, for this research, visual attributes of images of calligraphic characters sampled randomly from a work created by a single artist. It is independent of page layout or textual content. An experimental design is developed to investigate to what extent the source of a single, or of a few pairs, of character images can be assigned to the either same work or to two different works. The experiments are conducted on the 13,571 segmented and labeled 600-dpi character images of the CADAL database. The classifier is not trained on the works tested, only on other works. Even when only a few samples of same-class pairs are available, the difference-vector of a few simple features extracted from each image of a pair yields over 80% classification accuracy for a same-work vs. different-work dichotomy. When many pairs of different classes are available for each pair, the accuracy, using the same features, is almost the same. These style-verification experiments are part of our larger goal of style identification and forgery detection.</bib_extra>
-			<bib_extra key="BookTitle"></bib_extra>
-			<bib_extra key="Doi">10.1117/12.908872</bib_extra>
-			<bib_extra key="Journal">Proc. SPIE</bib_extra>
 			<bib_extra key="Url"> http://dx.doi.org/10.1117/12.908872</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhang:2007:2</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/high dimensional index for character database.pdf</relative_filename>
+			<key>Zhuang_2007_1</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
-			<bib_title>Hierarchical Approximate Matching for Retrieval of Chinese Historical Calligraphy Character</bib_title>
-			<bib_authors>Zhang, Xia-Fen and Zhuang, Yue-Ting and Wu, Jiang-Qin and Wu, Fei</bib_authors>
-			<bib_journal>Journal of Computer Science and Technology</bib_journal>
-			<bib_volume>22</bib_volume>
-			<bib_number>4</bib_number>
-			<bib_pages>633-640</bib_pages>
-			<bib_year>2007</bib_year>
-			<bib_extra key="Abstract">As historical Chinese calligraphy works are being digitized, the problem of retrieval becomes a new challenge. But, currently no OCR technique can convert calligraphy character images into text, nor can the existing Handwriting Character Recognition approach does not work for it. This paper proposes a novel approach to efficiently retrieving Chinese calligraphy characters on the basis of similarity: calligraphy character image is represented by a collection of discriminative features, and high retrieval speed with reasonable effectiveness is achieved. First, calligraphy characters that have no possibility similar to the query are filtered out step by step by comparing the character complexity, stroke density and stroke protrusion. Then, similar calligraphy characters are retrieved and ranked according to their matching cost produced by approximate shape match. In order to speed up the retrieval, we employed high dimensional data structure –- PK-tree. Finally, the efficiency of the algorithm is demonstrated by a preliminary experiment with 3012 calligraphy character images.</bib_extra>
-			<bib_extra key="Doi">10.1007/s11390-007-9077-8</bib_extra>
-			<bib_extra key="Issn">1860-4749</bib_extra>
-			<bib_extra key="Url">http://dx.doi.org/10.1007/s11390-007-9077-8</bib_extra>
-		</doc>
-		<doc>
-			<filename></filename>
-			<key>Zhuang:2007:1</key>
-			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1145/1282080.1282083</bib_doi>
 			<bib_title>Interactive High-dimensional Index for Large Chinese Calligraphic Character Databases</bib_title>
 			<bib_authors>Zhuang, Yl and Zhuang, Yueting and Li, Qing and Chen, Lei</bib_authors>
 			<bib_journal></bib_journal>
@@ -375,7 +284,6 @@
 			<bib_extra key="Acmid">1282083</bib_extra>
 			<bib_extra key="Address">New York, NY, USA</bib_extra>
 			<bib_extra key="Articleno">8</bib_extra>
-			<bib_extra key="Doi">10.1145/1282080.1282083</bib_extra>
 			<bib_extra key="Issn">1530-0226</bib_extra>
 			<bib_extra key="Issue_date">September 2007</bib_extra>
 			<bib_extra key="Keywords">Chinese calligraphic character, Hyper-centre relocation, Pseudo k-NN</bib_extra>
@@ -384,11 +292,11 @@
 			<bib_extra key="Url">http://doi.acm.org/10.1145/1282080.1282083</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhang:2006:1</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/character similarity comparison.pdf</relative_filename>
+			<key>Zhang_2006_1</key>
 			<notes></notes>
-			<bib_type>Inbook</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inbook</bib_type>
+			<bib_doi>10.1007/978-3-540-69423-6_35</bib_doi>
 			<bib_title>Visual Verification of Historical Chinese Calligraphy Works: 13th International Multimedia Modeling Conference, MMM 2007, Singapore, January 9-12, 2007. Proceedings, Part I</bib_title>
 			<bib_authors>Zhang, Xiafen and Zhuang, Yueting</bib_authors>
 			<bib_journal></bib_journal>
@@ -396,20 +304,18 @@
 			<bib_number></bib_number>
 			<bib_pages>354-363</bib_pages>
 			<bib_year>2006</bib_year>
-			<bib_extra key="Address">Berlin, Heidelberg</bib_extra>
-			<bib_extra key="Chapter"></bib_extra>
-			<bib_extra key="Doi">10.1007/978-3-540-69423-6_35</bib_extra>
-			<bib_extra key="Editor">Cham, Tat-Jen and Cai, Jianfei and Dorai, Chitra and Rajan, Deepu and Chua, Tat-Seng and Chia, Liang-Tien</bib_extra>
+			<bib_extra key="address">Berlin, Heidelberg</bib_extra>
+			<bib_extra key="editor">Cham, Tat-Jen and Cai, Jianfei and Dorai, Chitra and Rajan, Deepu and Chua, Tat-Seng and Chia, Liang-Tien</bib_extra>
 			<bib_extra key="Isbn">978-3-540-69423-6</bib_extra>
-			<bib_extra key="Publisher">Springer Berlin Heidelberg</bib_extra>
+			<bib_extra key="publisher">Springer Berlin Heidelberg</bib_extra>
 			<bib_extra key="Url">http://dx.doi.org/10.1007/978-3-540-69423-6_35</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Tianjiao:2013</key>
+			<relative_filename>../../other research/Future-work/Word style recognition using KNN.pdf</relative_filename>
+			<key>Tianjiao_2013</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.2991/icmt-13.2013.115</bib_doi>
 			<bib_title>Calligraphy Word Style Recognition by KNN Based Feature Library Filtering</bib_title>
 			<bib_authors>Tianjiao, Mao and Jiangqin, Wu and Pengcheng, Gao and Yang, Xia and Yuan, Lin</bib_authors>
 			<bib_journal>Proceedings of 3rd International Conference on Multimedia Technology(ICMT-13)</bib_journal>
@@ -417,16 +323,15 @@
 			<bib_number></bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2013</bib_year>
-			<bib_extra key="Doi">10.2991/icmt-13.2013.115</bib_extra>
 			<bib_extra key="Isbn">http://id.crossref.org/isbn/978-90-78677-89-5</bib_extra>
 			<bib_extra key="Publisher">Atlantis Press</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhuang:2007:2</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/brush character retrieval and learning.pdf</relative_filename>
+			<key>Zhuang_2007_2</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.4018/jdet.2007040103</bib_doi>
 			<bib_title>Chinese Brush Calligraphy Character Retrieval and Learning</bib_title>
 			<bib_authors>Zhuang, Yueting and Zhang, Xiafen and Lu, Weiming and Wu, Fei</bib_authors>
 			<bib_journal>International Journal of Distance Education Technologies</bib_journal>
@@ -434,16 +339,15 @@
 			<bib_number>2</bib_number>
 			<bib_pages>29-39</bib_pages>
 			<bib_year>2007</bib_year>
-			<bib_extra key="Doi">10.4018/jdet.2007040103</bib_extra>
 			<bib_extra key="Issn">1539-3119</bib_extra>
 			<bib_extra key="Publisher">IGI Global</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Lin:2013</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/LHS based character recognition.pdf</relative_filename>
+			<key>Lin_2013</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/2467696.2467704</bib_doi>
 			<bib_title>LSH-based Large Scale Chinese Calligraphic Character Recognition</bib_title>
 			<bib_authors>Lin, Yuan and Wu, Jiangqin and Gao, Pengcheng and Xia, Yang and Mao, Tianjiao</bib_authors>
 			<bib_journal></bib_journal>
@@ -452,47 +356,22 @@
 			<bib_pages>323-330</bib_pages>
 			<bib_year>2013</bib_year>
 			<bib_extra key="Acmid">2467704</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 13th ACM/IEEE-CS Joint Conference on Digital Libraries</bib_extra>
-			<bib_extra key="Doi">10.1145/2467696.2467704</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 13th ACM/IEEE-CS Joint Conference on Digital Libraries</bib_extra>
 			<bib_extra key="Isbn">978-1-4503-2077-1</bib_extra>
 			<bib_extra key="Keywords">calligraphy, character recognition, lsh-based search</bib_extra>
 			<bib_extra key="Location">Indianapolis, Indiana, USA</bib_extra>
 			<bib_extra key="Numpages">8</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">JCDL ’13</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">JCDL ’13</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/2467696.2467704</bib_extra>
 		</doc>
 		<doc>
 			<relative_filename>../../other research/Digital Libraries/CADAL/The CADAL Calligraphic Database.pdf</relative_filename>
-			<key>Gao_2012_2</key>
+			<key>Zhang_2011</key>
 			<notes></notes>
 			<bib_type>inproceedings</bib_type>
-			<bib_doi>10.1145/2232817.2232889</bib_doi>
-			<bib_title>CADAL Digital Calligraphy System</bib_title>
-			<bib_authors>Gao, Pengcheng and Wu, Jiangqin and Xia, Yang and Lin, Yuan</bib_authors>
-			<bib_journal></bib_journal>
-			<bib_volume></bib_volume>
-			<bib_number></bib_number>
-			<bib_pages>357-358</bib_pages>
-			<bib_year>2012</bib_year>
-			<bib_extra key="Acmid">2232889</bib_extra>
-			<bib_extra key="address">New York, NY, USA</bib_extra>
-			<bib_extra key="booktitle">Proceedings of the 12th ACM/IEEE-CS Joint Conference on Digital Libraries</bib_extra>
-			<bib_extra key="Isbn">978-1-4503-1154-0</bib_extra>
-			<bib_extra key="Keywords">CADAL, calligraphy, content-based search, radical-based search</bib_extra>
-			<bib_extra key="Location">Washington, DC, USA</bib_extra>
-			<bib_extra key="Numpages">2</bib_extra>
-			<bib_extra key="publisher">ACM</bib_extra>
-			<bib_extra key="series">JCDL ’12</bib_extra>
-			<bib_extra key="Url">http://doi.acm.org/10.1145/2232817.2232889</bib_extra>
-		</doc>
-		<doc>
-			<filename></filename>
-			<key>Zhang:2011</key>
-			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_doi>10.1145/2037342.2037349</bib_doi>
 			<bib_title>The CADAL Calligraphic Database</bib_title>
 			<bib_authors>Zhang, Xiafen and Nagy, George</bib_authors>
 			<bib_journal></bib_journal>
@@ -501,23 +380,22 @@
 			<bib_pages>37-42</bib_pages>
 			<bib_year>2011</bib_year>
 			<bib_extra key="Acmid">2037349</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 2011 Workshop on Historical Document Imaging and Processing</bib_extra>
-			<bib_extra key="Doi">10.1145/2037342.2037349</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 2011 Workshop on Historical Document Imaging and Processing</bib_extra>
 			<bib_extra key="Isbn">978-1-4503-0916-5</bib_extra>
 			<bib_extra key="Keywords">Chinese calligraphy, ground truth, historical documents, styles</bib_extra>
 			<bib_extra key="Location">Beijing, China, USA</bib_extra>
 			<bib_extra key="Numpages">6</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">HIP ’11</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">HIP ’11</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/2037342.2037349</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhuang:2006</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/towards_interactive_indexing_for_large_chinese_calligraphic_character_databases.pdf</relative_filename>
+			<key>Zhuang_2006</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/1183614.1183779</bib_doi>
 			<bib_title>Towards Interactive Indexing for Large Chinese Calligraphic Character Databases</bib_title>
 			<bib_authors>Zhuang, Yi and Zhuang, Yueting and Li, Qing and Chen, Lei</bib_authors>
 			<bib_journal></bib_journal>
@@ -526,22 +404,21 @@
 			<bib_pages>884-885</bib_pages>
 			<bib_year>2006</bib_year>
 			<bib_extra key="Acmid">1183779</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 15th ACM International Conference on Information and Knowledge Management</bib_extra>
-			<bib_extra key="Doi">10.1145/1183614.1183779</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 15th ACM International Conference on Information and Knowledge Management</bib_extra>
 			<bib_extra key="Isbn">1-59593-433-2</bib_extra>
 			<bib_extra key="Keywords">Chinese calligraphic character, high-dimensional index</bib_extra>
 			<bib_extra key="Location">Arlington, Virginia, USA</bib_extra>
 			<bib_extra key="Numpages">2</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">CIKM ’06</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">CIKM ’06</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/1183614.1183779</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Chung-Shing:2014</key>
+			<relative_filename>../../other research/Future-work/Stroke Feature Database construction.pdf</relative_filename>
+			<key>Chung_Shing_2014</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
+			<bib_type>article</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>Stroke Feature Database Construction for Chinese Calligraphy</bib_title>
 			<bib_authors>Chung-Shing, Wang and Ching-Fu, Chen and Chung-Chuan, Wang and Teng-Ruey, Chang</bib_authors>
@@ -553,10 +430,10 @@
 			<bib_extra key="Month">jun</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Sheng:2011</key>
+			<relative_filename>../../other research/phd thesis/Development of Chinese Calligraphy.pdf</relative_filename>
+			<key>Sheng_2011</key>
 			<notes></notes>
-			<bib_type>PhdThesis</bib_type>
+			<bib_type>phdthesis</bib_type>
 			<bib_doi></bib_doi>
 			<bib_title>The Development of Chinese Calligraphy in Relation to Buddhism and Politics during the Early Tang Era</bib_title>
 			<bib_authors>Sheng, Ruth Su-Ying</bib_authors>
@@ -565,14 +442,14 @@
 			<bib_number></bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2011</bib_year>
-			<bib_extra key="School">University of Florida</bib_extra>
+			<bib_extra key="school">University of Florida</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Li:2004</key>
+			<relative_filename>../../other research/Future-work/Using Stochastic models.pdf</relative_filename>
+			<key>Li_2004</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1109/tip.2003.821349</bib_doi>
 			<bib_title>Studying Digital Imagery of Ancient Paintings by Mixtures of Stochastic Models</bib_title>
 			<bib_authors>Li, J. and Wang, J. Z.</bib_authors>
 			<bib_journal>IEEE Trans. on Image Process.</bib_journal>
@@ -580,17 +457,16 @@
 			<bib_number>3</bib_number>
 			<bib_pages>340-353</bib_pages>
 			<bib_year>2004</bib_year>
-			<bib_extra key="Doi">10.1109/tip.2003.821349</bib_extra>
 			<bib_extra key="Issn">1057-7149</bib_extra>
 			<bib_extra key="Month">mar</bib_extra>
 			<bib_extra key="Publisher">Institute of Electrical and Electronics Engineers (IEEE)</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Liang:2013</key>
+			<relative_filename>../../other research/Future-work/modeling by ontology.pdf</relative_filename>
+			<key>Liang_2013</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1109/ita.2013.32</bib_doi>
 			<bib_title>Modeling Chinese Painting Images Based on Ontology</bib_title>
 			<bib_authors>Wu, Xinming and Li, Guofeng and Liang, Ye</bib_authors>
 			<bib_journal>2013 International Conference on Information Technology and Applications</bib_journal>
@@ -598,17 +474,16 @@
 			<bib_number></bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2013</bib_year>
-			<bib_extra key="Doi">10.1109/ita.2013.32</bib_extra>
 			<bib_extra key="Isbn">http://id.crossref.org/isbn/978-1-4799-2876-7</bib_extra>
 			<bib_extra key="Month">nov</bib_extra>
 			<bib_extra key="Publisher">Institute of Electrical &amp; Electronics Engineers (IEEE)</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Qiu:2014</key>
+			<relative_filename>../../other research/Future-work/writer identification through markov field.pdf</relative_filename>
+			<key>Qiu_2014</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.12733/jics20104931</bib_doi>
 			<bib_title>A Method for Calligraphy Writer Identification by Integrating Gabor Filter and Gaussian Markov Random Field</bib_title>
 			<bib_authors>Qiu, Juan</bib_authors>
 			<bib_journal>Journal of Information and Computational Science</bib_journal>
@@ -616,17 +491,16 @@
 			<bib_number>17</bib_number>
 			<bib_pages>6193-6200</bib_pages>
 			<bib_year>2014</bib_year>
-			<bib_extra key="Doi">10.12733/jics20104931</bib_extra>
 			<bib_extra key="Issn">1548-7741</bib_extra>
 			<bib_extra key="Month">nov</bib_extra>
 			<bib_extra key="Publisher">Binary Information Press</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Li:2009</key>
+			<relative_filename>../../other research/Future-work/calligraphy Classification system.pdf</relative_filename>
+			<key>Li_2009</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1109/cit.2009.83</bib_doi>
 			<bib_title>Designing a Novel System to Classify Traditional Chinese Calligraphy Images</bib_title>
 			<bib_authors>Li, Huike and Peng, Boyu and Gao, Zhong</bib_authors>
 			<bib_journal>2009 Ninth IEEE International Conference on Computer and Information Technology</bib_journal>
@@ -634,16 +508,15 @@
 			<bib_number></bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2009</bib_year>
-			<bib_extra key="Doi">10.1109/cit.2009.83</bib_extra>
 			<bib_extra key="Isbn">http://id.crossref.org/isbn/978-0-7695-3836-5</bib_extra>
 			<bib_extra key="Publisher">Institute of Electrical &amp; Electronics Engineers (IEEE)</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhang:2006:2</key>
+			<relative_filename>../../other research/Future-work/Denoising tablet images.pdf</relative_filename>
+			<key>Zhang_2006_2</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1631/jzus.2006.a1178</bib_doi>
 			<bib_title>Denoising of Chinese calligraphy tablet images based on run-length statistics and structure characteristic of character strokes</bib_title>
 			<bib_authors>Zhang, Jun-song and Yu, Jin-hui and Mao, Guo-hong and Ye, Xiu-zi</bib_authors>
 			<bib_journal>J. Zhejiang Univ. - Sci. A</bib_journal>
@@ -651,18 +524,17 @@
 			<bib_number></bib_number>
 			<bib_pages>1178-1186</bib_pages>
 			<bib_year>2006</bib_year>
-			<bib_extra key="Doi">10.1631/jzus.2006.a1178</bib_extra>
 			<bib_extra key="Issn">1862-1775</bib_extra>
 			<bib_extra key="Month">jul</bib_extra>
 			<bib_extra key="Numbe">7</bib_extra>
 			<bib_extra key="Publisher">Zhejiang University Press</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Lu:2011</key>
+			<relative_filename>../../other research/Future-work/Shape matching for character retrieval.pdf</relative_filename>
+			<key>Lu_2011</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1631/jzus.c1100005</bib_doi>
 			<bib_title>Efficient shape matching for Chinese calligraphic character retrieval</bib_title>
 			<bib_authors>Lu, Wei-ming and Wu, Jiang-qin and Wei, Bao-gang and Zhuang, Yue-ting</bib_authors>
 			<bib_journal>J. Zhejiang Univ. - Sci. C</bib_journal>
@@ -670,17 +542,16 @@
 			<bib_number>11</bib_number>
 			<bib_pages>873-884</bib_pages>
 			<bib_year>2011</bib_year>
-			<bib_extra key="Doi">10.1631/jzus.c1100005</bib_extra>
 			<bib_extra key="Issn">1869-196X</bib_extra>
 			<bib_extra key="Month">nov</bib_extra>
 			<bib_extra key="Publisher">Zhejiang University Press</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Zhang:2015</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/Quantifying Calligraphic sytles.pdf</relative_filename>
+			<key>Zhang_2015</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1117/1.jei.24.5.053003</bib_doi>
 			<bib_title>Computational method for calligraphic style representation and classification</bib_title>
 			<bib_authors>Zhang, Xiafen and Nagy, George</bib_authors>
 			<bib_journal>Journal of Electronic Imaging</bib_journal>
@@ -688,17 +559,16 @@
 			<bib_number>5</bib_number>
 			<bib_pages>053003</bib_pages>
 			<bib_year>2015</bib_year>
-			<bib_extra key="Doi">10.1117/1.jei.24.5.053003</bib_extra>
 			<bib_extra key="Issn">1017-9909</bib_extra>
 			<bib_extra key="Month">sep</bib_extra>
 			<bib_extra key="Publisher">SPIE-Intl Soc Optical Eng</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Shi:2003:</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/character comparison by radical decomposition.pdf</relative_filename>
+			<key>Shi_2003</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1145/964161.964163</bib_doi>
 			<bib_title>Offline Handwritten Chinese Character Recognition by Radical Decomposition</bib_title>
 			<bib_authors>Shi, Daming and Damper, Robert I. and Gunn, Steve R.</bib_authors>
 			<bib_journal></bib_journal>
@@ -708,7 +578,6 @@
 			<bib_year>2003</bib_year>
 			<bib_extra key="Acmid">964163</bib_extra>
 			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="Doi">10.1145/964161.964163</bib_extra>
 			<bib_extra key="Issn">1530-0226</bib_extra>
 			<bib_extra key="Issue_date">March 2003</bib_extra>
 			<bib_extra key="Keywords">Chinese computing, Viterbi decoding, active shape modeling, offline character recognition</bib_extra>
@@ -718,11 +587,11 @@
 			<bib_extra key="Url">http://doi.acm.org/10.1145/964161.964163</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Chen:2012</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/radical deconstruction for generation of fonts.pdf</relative_filename>
+			<key>Chen_2012</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/2361354.2361379</bib_doi>
 			<bib_title>Effective Radical Segmentation of Offline Handwritten Chinese Characters Towards Constructing Personal Handwritten Fonts</bib_title>
 			<bib_authors>Chen, Zhanghui and Zhou, Baoyao</bib_authors>
 			<bib_journal></bib_journal>
@@ -731,23 +600,22 @@
 			<bib_pages>107-116</bib_pages>
 			<bib_year>2012</bib_year>
 			<bib_extra key="Acmid">2361379</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 2012 ACM Symposium on Document Engineering</bib_extra>
-			<bib_extra key="Doi">10.1145/2361354.2361379</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 2012 ACM Symposium on Document Engineering</bib_extra>
 			<bib_extra key="Isbn">978-1-4503-1116-8</bib_extra>
 			<bib_extra key="Keywords">genetic algorithm, offline handwritten chinese character recognition, personal handwritten fonts, radical segmentation, snake model</bib_extra>
 			<bib_extra key="Location">Paris, France</bib_extra>
 			<bib_extra key="Numpages">10</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">DocEng ’12</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">DocEng ’12</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/2361354.2361379</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Yu:2009</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/synthetic calligraphy generation using styles.pdf</relative_filename>
+			<key>Yu_2009</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1145/1555400.1555425</bib_doi>
 			<bib_title>Style-consistency Calligraphy Synthesis System in Digital Library</bib_title>
 			<bib_authors>Yu, Kai and Wu, Jiangqin and Zhuang, Yueting</bib_authors>
 			<bib_journal></bib_journal>
@@ -756,23 +624,22 @@
 			<bib_pages>145-152</bib_pages>
 			<bib_year>2009</bib_year>
 			<bib_extra key="Acmid">1555425</bib_extra>
-			<bib_extra key="Address">New York, NY, USA</bib_extra>
-			<bib_extra key="BookTitle">Proceedings of the 9th ACM/IEEE-CS Joint Conference on Digital Libraries</bib_extra>
-			<bib_extra key="Doi">10.1145/1555400.1555425</bib_extra>
+			<bib_extra key="address">New York, NY, USA</bib_extra>
+			<bib_extra key="booktitle">Proceedings of the 9th ACM/IEEE-CS Joint Conference on Digital Libraries</bib_extra>
 			<bib_extra key="Isbn">978-1-60558-322-8</bib_extra>
 			<bib_extra key="Keywords">structure determination, style evaluation model (SEM), style-consistency calligraphy synthesis</bib_extra>
 			<bib_extra key="Location">Austin, TX, USA</bib_extra>
 			<bib_extra key="Numpages">8</bib_extra>
-			<bib_extra key="Publisher">ACM</bib_extra>
-			<bib_extra key="Series">JCDL ’09</bib_extra>
+			<bib_extra key="publisher">ACM</bib_extra>
+			<bib_extra key="series">JCDL ’09</bib_extra>
 			<bib_extra key="Url">http://doi.acm.org/10.1145/1555400.1555425</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Li:2013</key>
+			<relative_filename>../../other research/Digital Libraries/calligraphy generation.pdf</relative_filename>
+			<key>Li_2013</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.4304/jsw.8.12.3048-3054</bib_doi>
 			<bib_title>Automatic Creation of Artistic Chinese Calligraphy</bib_title>
 			<bib_authors>Li, Wei and Zhou, Changle</bib_authors>
 			<bib_journal>Journal of Software</bib_journal>
@@ -780,17 +647,16 @@
 			<bib_number>12</bib_number>
 			<bib_pages></bib_pages>
 			<bib_year>2013</bib_year>
-			<bib_extra key="Doi">10.4304/jsw.8.12.3048-3054</bib_extra>
 			<bib_extra key="Issn">1796-217X</bib_extra>
 			<bib_extra key="Month">dec</bib_extra>
 			<bib_extra key="Publisher">International Academy Publishing (IAP)</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Gao:2014</key>
+			<relative_filename>../../other research/Digital Libraries/CADAL/fast image search.pdf</relative_filename>
+			<key>Gao_2014</key>
 			<notes></notes>
-			<bib_type>InProceedings</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>inproceedings</bib_type>
+			<bib_doi>10.1109/JCDL.2014.6970170</bib_doi>
 			<bib_title>Fast Image-based Chinese Calligraphic Character Retrieval on Large Scale Data</bib_title>
 			<bib_authors>Gao, P. and Wu, J. and Lin, Y. and Xia, Y. and Tianjiao, Mao and Baogang, Wei</bib_authors>
 			<bib_journal></bib_journal>
@@ -798,17 +664,16 @@
 			<bib_number></bib_number>
 			<bib_pages>211-220</bib_pages>
 			<bib_year>2014</bib_year>
-			<bib_extra key="BookTitle">Digital Libraries (JCDL), 2014 IEEE/ACM Joint Conference on</bib_extra>
-			<bib_extra key="Doi">10.1109/JCDL.2014.6970170</bib_extra>
+			<bib_extra key="booktitle">Digital Libraries (JCDL), 2014 IEEE/ACM Joint Conference on</bib_extra>
 			<bib_extra key="Keywords">handwriting recognition;handwritten character recognition;humanities;image retrieval;CADAL;GIST-OSC descriptor;calligraphic character dictionary;handwriting recognition;image-based Chinese calligraphic character retrieval;large scale data;oriented shape context;shape descriptor;Binary codes;Character recognition;Charge coupled devices;Context;Educational institutions;Eigenvalues and eigenfunctions;Shape;CADAL;Calligraphy;GIST-OSC;Retrieval</bib_extra>
 			<bib_extra key="Month">Sept</bib_extra>
 		</doc>
 		<doc>
-			<filename></filename>
-			<key>Wong:2008</key>
+			<relative_filename>../../other research/model based analysis.pdf</relative_filename>
+			<key>Wong_2008</key>
 			<notes></notes>
-			<bib_type>Article</bib_type>
-			<bib_doi></bib_doi>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1016/j.cviu.2007.03.001</bib_doi>
 			<bib_title>Model-based analysis of Chinese calligraphy images</bib_title>
 			<bib_authors>Wong, Sam T. S. and Leung, Howard and Ip, Horace H. S.</bib_authors>
 			<bib_journal>Computer Vision and Image Understanding</bib_journal>
@@ -816,7 +681,6 @@
 			<bib_number>1</bib_number>
 			<bib_pages>69-85</bib_pages>
 			<bib_year>2008</bib_year>
-			<bib_extra key="Doi">10.1016/j.cviu.2007.03.001</bib_extra>
 			<bib_extra key="Issn">1077-3142</bib_extra>
 			<bib_extra key="Month">jan</bib_extra>
 			<bib_extra key="Publisher">Elsevier BV</bib_extra>
