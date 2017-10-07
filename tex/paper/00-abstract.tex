@@ -1,7 +1,29 @@
 ABSTRACT\\
 
-Calligraphy experts typically must carefully examine minute details in individual characters in the process of determing authenticity.  The large number of Chinese Characters makes finding and comparing similar characters within the same document a difficult and time-consuming process.
+The character classification problem has not been solved in the general case.  Character classification can be done if the characters are restricted to certain fonts, but not for unconstrained fonts and especially not for free-flowing or badly degraded images.
 
-I propose a system which makes closely examining related characters intuitive and fast.  I present CaliSet(Calligraphy Dataset).  CaliSet provides the researcher with a high quality zoom-able and navigable image of the work.  Overlay-ed on this image are bounding boxes representing individual characters in the database.  Selecting any of these boxes brings up a carousel of similar images at the bottom of the page.  Selecting any of these characters brings up the source document for that character in a new window, with source character already selected(to-do).  
+Current progress in character and object classification depends on the existance of large labeled data sets from which a classification model may be learned.
+
+The most comprehensive dataset of ancient chinese calligraphy is CADAL
+
+I made a copy of this dataset and it's associated images
+
+The quality of models directly related to the quality of the dataset used to train such models.
+
+I performed a visual audit of the dataset and made some improvement on said set,
+
+A classification model built from that dataset was able to improve character detection rates over an untrained model.
+
+Heart of issue:  CADAL Dataset bounding box:  Improving the accuracy and completeness of the bounding boxes of the CADAL Dataset produces better quality classifiers.
+
+
+Areas still needing done:  Character Name,  Cannot reliably put in Character name because I cannot read chinese.
+
+Visual verification of bounding boxes of characters within CADAL dataset and impacts in infered models.
+
+
+Primary contribution of my work is the that the core results of my work are AVAILABLE, and VERIFIABLE
+
+Primary contribution:  My work builds directly on already existing publicably available work.  That my results are available for others to fact check.
 
 \newpage

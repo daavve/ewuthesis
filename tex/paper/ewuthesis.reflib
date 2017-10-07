@@ -82,7 +82,7 @@
 			<bib_extra key="Month">Dec</bib_extra>
 		</doc>
 		<doc>
-			<relative_filename>../../other research/Digital Libraries/CADAL/CalliGUI, interactive character labeling.pdf</relative_filename>
+			<relative_filename>../ewuthesis/CADAL/CAL-GUI.pdf</relative_filename>
 			<key>Nagy_2011</key>
 			<notes></notes>
 			<bib_type>inproceedings</bib_type>
@@ -292,7 +292,7 @@
 			<bib_extra key="Url">http://doi.acm.org/10.1145/1282080.1282083</bib_extra>
 		</doc>
 		<doc>
-			<relative_filename>../../other research/Digital Libraries/CADAL/character similarity comparison.pdf</relative_filename>
+			<relative_filename>../ewuthesis/other research/VisualVerificationofHistoricalChinese.pdf</relative_filename>
 			<key>Zhang_2006_1</key>
 			<notes></notes>
 			<bib_type>inbook</bib_type>
@@ -701,6 +701,28 @@
 			<bib_year>2012</bib_year>
 			<bib_extra key="address">Singaport</bib_extra>
 			<bib_extra key="howpublished">International Conference on Information and Multimedia Technology</bib_extra>
+		</doc>
+		<doc>
+			<relative_filename>../ewuthesis/other research/pdf/p27-parnas.pdf</relative_filename>
+			<key>Parnas_2017</key>
+			<notes>&quot;Points out that the character recognition problem has not been solved</notes>
+			<bib_type>article</bib_type>
+			<bib_doi>10.1145/3132724</bib_doi>
+			<bib_title>The Real Risks of Artificial Intelligence</bib_title>
+			<bib_authors>Parnas, David Lorge</bib_authors>
+			<bib_journal>Commun. ACM</bib_journal>
+			<bib_volume>60</bib_volume>
+			<bib_number>10</bib_number>
+			<bib_pages>27-31</bib_pages>
+			<bib_year>2017</bib_year>
+			<bib_extra key="Acmid">3132724</bib_extra>
+			<bib_extra key="Address">New York, NY, USA</bib_extra>
+			<bib_extra key="Issn">0001-0782</bib_extra>
+			<bib_extra key="Issue_date">October 2017</bib_extra>
+			<bib_extra key="Month">sep</bib_extra>
+			<bib_extra key="Numpages">5</bib_extra>
+			<bib_extra key="Publisher">ACM</bib_extra>
+			<bib_extra key="Url">http://doi.acm.org/10.1145/3132724</bib_extra>
 		</doc>
 	</doclist>
 </library>

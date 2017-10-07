@@ -18,4 +18,5 @@ clean:
 		*.lot \
 		*.out \
 		*.toc \
-		*.xdy
+		*.xdy \
+		*.glo
