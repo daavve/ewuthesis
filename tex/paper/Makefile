@@ -4,9 +4,9 @@
 ###################################################################################
 
 all:
-	pdflatex CaliSet\:\ The\ Calligraphy\ Dataset.tex
-	bibtex CaliSet\:\ The\ Calligraphy\ Dataset.aux 
-	pdflatex CaliSet\:\ The\ Calligraphy\ Dataset.tex
+	pdflatex 2018-McInnis.tex
+	bibtex 2018-McInnis.aux 
+	pdflatex 2018-McInnis.tex
 
 clean:
 	rm -f *.aux \
