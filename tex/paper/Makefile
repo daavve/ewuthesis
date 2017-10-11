@@ -5,8 +5,9 @@
 
 all:
 	pdflatex 2018-McInnis.tex
-	bibtex 2018-McInnis.aux 
-	pdflatex 2018-McInnis.tex
+	#bibtex 2018-McInnis.aux 
+	#pdflatex 2018-McInnis.tex
+	make clean
 
 clean:
 	rm -f *.aux \

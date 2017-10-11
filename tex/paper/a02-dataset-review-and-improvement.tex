@@ -1,5 +1,4 @@
-
-\chapter{existing collections}
+\chapter{CADAL: Bounding box review and improvement}
 Available collections of Chinese Calligraphy
 
 This website has digitized and posted online a large portion of thier collection.  The data on this website is broken into works, with a work consisting of several pages.  Each work has an Author, and each page has the digital image.  The Chinese text of each document is also present in Unicode format for each artifact.
@@ -14,7 +13,7 @@ The researchers at CADAL have completed the tedious work of:
 2) Identified indifidual characters by thier unicode Chinese script.
 3) Additionally, Each character object also holds information about the Author, and the individual work, and page number of the work .
 
-TCCPID(traditional Chinese painting and calligraphy; ontology; image dataset)\cite{Bao_2010}.  Unfortunately, I was unable to gain any acces to this dataset.
+.  Unfortunately, I was unable to gain any acces to this dataset.
 
     Of these two sets, I was only able to gain access to one, the CADAL Calligraphy database.  This Calligraphy contains importantly, images of works, combined with meta-information indicating the position of each character on the page, as along with other pertinant information.  This metadata is critical, because machines cannot readily interpret the calligraphy images.  Additionally, many of the texts are very old, and the language has changed enought that even native speakers may have trouble desciphering the script.
 
@@ -82,69 +81,5 @@ What I was able to do:
         
         This  is if we do both black and white chars
 
-predict_good_true__pos: 4221
-predict_good_true__neg: 14041
-predict_good_false_pos: 287
-predict_good_false_neg: 11495
-predict_bad__true__pos: 3571
-predict_bad__true__neg: 14077
-predict_bad__false_pos: 251
-predict_bad__false_neg: 12145
-Num Boxes: 30044
 
-Predict_good coorect 61%
-Predict_bad correct 59%
-
-If we only do white chars:
-
-predict_good_true__pos: 13624
-predict_good_true__neg: 9109
-predict_good_false_pos: 5219
-predict_good_false_neg: 2092
-predict_bad__true__pos: 5089
-predict_bad__true__neg: 14156
-predict_bad__false_pos: 172
-predict_bad__false_neg: 10627
-Num Boxes: 30044
-
-Predict_good correct: 76%
-Predict_bad correct: 64%
-
-https://en.wikipedia.org/wiki/Precision_and_recall
-
-I can use the improved recall stat to justify the work.  It really changes the behaviour of the classifier.
-
-classifier_updated data
-pred_good precision:0.726884703623
-pred_good recall: 0.866887248664
-preg_good_accuracy: 0.756656903209
-
-classifier origional data
-pred_bad precision: 0.9673065957
-pred_bad Recall: 0.3238101298
-pred_bad accuracy: 0.64056051125
-    
-    \begin{figure}{} % page/8933
-    \parbox{12cm}{\includegraphics[width=12cm]{cadal-most-characters-boxed.png}}
-    \caption{This page has bounding box data for most characters}
-    \label{cadal most characters boxed}
-    \end{figure}
-    
-    \begin{figure}{} % page/8938
-    \parbox{12cm}{\includegraphics[width=12cm]{cadal-few-characters-boxed.png}}
-    \caption{This page has bounding box data for very few characters}
-    \label{cadal less characters boxed}
-    \end{figure}
-    
-    \begin{figure}{}
-    \parbox{12cm}{\includegraphics[width=12cm]{cadal-box-missing-part-of-character.png}}
-    \caption{Box not covering whole character, and box overlaps a different character when it doesn't have to}
-    \label{cadal single character examples}
-    \end{figure}
-    
-    \begin{figure}{}
-    \parbox{12cm}{\includegraphics[width=12cm]{calliset-erd.png}}
-    \caption{character database in calliset website}
-    \label{character database in calliset website}
-    \end{figure}
     
