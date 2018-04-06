@@ -1,15 +1,16 @@
 ABSTRACT\\
 
-The character classification problem has not been solved in the general case.  Character classification can be done if the characters are restricted to certain fonts, but not for unconstrained fonts and especially not for free-flowing or badly degraded images.
+The handwritten character detection problem is mostly solved for latin texts.
 
-Current progress in character and object classification depends on the existance of large labeled data sets from which a classification model may be learned.
+Detection of individual chinese calligraphy characters remains difficult due to:
+    1)  The thousands of individual characters
+    2)  The complex nature of calligraphic styles
+    3)  Ancient chinese scripts carry special problems
+        3a) The scripts are frequently badly deterioated
+        3b) The origionals have been coppied multiple times by many individuals
+        
+This paper presents an novel application of the Discrete Fourtier Transform(DFT) we call the Fourtier Transform Filter(FTF)
 
-The most comprehensive dataset of ancient Chinese Calligraphy Data availble is the CADAL dataset.
-
-Hypothesis:  A classifier can be trained using the CADAL dataset to improve identification of characters from the "Collected Characters" Stelle.
-
-Answer to hypothesis:  The classifier trained from the CADAL dataset performs poorly on the Stelle.  This poor showing is caused by incomplete and inaccurate data inside the CADAL dataset.  Once the CADAL dataset is corrected to fill in missing data and correct inaccurate data the resulting classifier performs much better Collected characters Stelle.
-
-A large and high quality dataset is foundational to using statistical and Machine Learning methods to approach a classification problem.  The most significant contribution of this work is a validation of and improvement uppon the CADAL Dataset.
+The FTF is effectively a low-pass filter which removes the high-frequency parts of the image.  The resulting "smoothed image" can then be segmented using a hill-climbing algorithm.
 
 \newpage
