@@ -1,16 +1,15 @@
 ABSTRACT\\
 
-The handwritten character detection problem is mostly solved for latin texts.
+The handwritten calligraphic character detection problem is mostly solved for latin texts.
 
-Detection of individual chinese calligraphy characters remains difficult due to:
-    1)  The thousands of individual characters
-    2)  The complex nature of calligraphic styles
-    3)  Ancient chinese scripts carry special problems
-        3a) The scripts are frequently badly deterioated
-        3b) The origionals have been coppied multiple times by many individuals
-        
+Detection of individual chinese calligraphy characters remains difficult due to the thousands of individual characters as well as the complex nature of calligraphic styles.
+
+Ancient Chinese Calligraphy scripts are frequently badly deteriated, while also having been coppied multiple times by differing authors.
+
 This paper presents an novel application of the Discrete Fourtier Transform(DFT) we call the Fourtier Transform Filter(FTF)
 
 The FTF is effectively a low-pass filter which removes the high-frequency parts of the image.  The resulting "smoothed image" can then be segmented using a hill-climbing algorithm.
+
+The FTF is conceptually less complex than other segmenting algorithms.
 
 \newpage
